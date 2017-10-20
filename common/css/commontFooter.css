@@ -1,0 +1,102 @@
+/* commonNav css*/
+
+.navigation {
+    background-color: #ffffff;
+    height: 80px;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    -webkit-box-shadow: 1px 1px 5px #888;
+    box-shadow: 1px 1px 5px #888;
+}
+
+.navigation .navigation-logo {
+    background: url(http://imgw.pospal.cn/LandingPage/171009MC/img/logo.png) no-repeat;
+    width: 131px;
+    height: 40px;
+    margin-left: -8px;
+    margin-top: 19px;
+    float: left;
+}
+
+.navigation .navigation-text {
+    float: left;
+    margin-left: 20px;
+    line-height: 80px;
+}
+
+.navigation .navigation-right {
+    float: right;
+    line-height: 80px;
+}
+
+.navigation .navigation-right li {
+    margin-left: 30px;
+    color: #767676;
+}
+
+.navigation .navigation-right .navigation-a {
+    color: #767676;
+}
+
+.navigation .navigation-right .navigation-a:hover {
+    color: #000000;
+}
+
+.navigation .navigation-btn {
+    display: inline-block;
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff6727;
+    border-radius: 2px;
+    margin-left: 40px;
+}
+
+.navigation .navigation-btn:hover {
+    background-color: #ff4e00;
+}
+
+.navigation .navigation-icon {
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    background: url(http://imgw.pospal.cn/LandingPage/171009MC/img/QQcall.png) no-repeat;
+    vertical-align: middle;
+}
+
+
+/* commonFooter css*/
+
+.footer {
+    height: 480px;
+    background-color: #231f20;
+}
+
+.footer .footer-bottom {
+    position: absolute;
+    width: 100%;
+    top: 360px;
+    text-align: center;
+}
+
+.footer .footer-bottom .text-1 a {
+    color: #9f9f9f;
+}
+
+.footer .footer-bottom .text-1 {
+    color: #9f9f9f;
+    font-size: 14px;
+}
+
+.footer .footer-bottom .text-2 {
+    color: #707070;
+    font-size: 13px;
+    margin: 10px 0 0;
+}
