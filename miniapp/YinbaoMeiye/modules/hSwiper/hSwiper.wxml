@@ -1,0 +1,13 @@
+<import src="../../modules/hSwiper/timeslotTemplate.wxml" />
+
+<template name="hSwiper">
+  <view class="hSwiper">
+    <view class="hSwiperCon" animation="{{swiperAnmiation}}" bindtouchstart="{{'swiperTouchstart'+id}}" bindtouchmove="{{'swiperTouchmove'+id}}" bindtouchend="{{'swiperTouchend'+id}}" style="{{wrapperStyleValue[wrapperStyle]}}">
+      <block wx:for="{{list}}" wx:key="name" wx:for-item="listItem">
+        <view class="item" style="{{itemStyle}}">
+          <template is="{{templateName}}" data="{{selectedSlot, listItem}}"></template>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>

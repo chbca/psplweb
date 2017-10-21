@@ -1,0 +1,37 @@
+<!--pages/heartSay/presentation/presentation.wxml-->
+<view class='page'>
+  <view class='ppg_headImg'>
+    <image src='{{giftImgPath}}' mode='aspectFill'></image>
+    <text>{{giftName}}</text>
+  </view>
+  <view class='ppg_friends'>
+    <view class='ppg_friends__hd'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/friends@2x.png'></image>
+    </view>
+    <view class='ppg_friends__bd'>
+      <input type='text' placeholder='请选择一个朋友' placeholder-class='ppg_text'></input>
+    </view>
+
+    <view class='ppg_friends__ft'></view>
+  </view>
+
+  <view class='ppg_blessing'>
+    <view class='ppg_title'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/inputIicon@2x.png'></image>
+    </view>
+    <textarea  type='text' cursor-spacing='30' class='ppg_textInput' placeholder='请输入您的祝福语' placeholder-class='ppg_text'>
+    </textarea>
+    <view wx:if='{{isAddPhoto}}' class='ppg_foot' bindtap='bindAddPhoto'>
+      <view class='ppg_but'>
+        <text>+</text> 添加图片或视频</view>
+    </view>
+    <view  wx:else class='ppg_foot ppg_photo'  bindtap='bindAddPhoto'>
+      <view class='ppg_but'>
+        <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/payIcon1@2x.png'></image> 图片祝福</view>
+    </view>
+  </view>
+  <view class='ppg_foot_but'>
+    <button type='primary'> 赠送</button>
+  </view>
+
+</view>

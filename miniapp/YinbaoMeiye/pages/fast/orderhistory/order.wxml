@@ -1,0 +1,91 @@
+<view class="page">
+  <button class="weui-btn" plain="true" bindtap="tapJump"
+  style="border: none; padding-top: 30rpx; font-size: 24rpx; line-height: 1.5;text-align: center; color: #576b95;">觉得很方便，快去分享告诉好友吧</button>
+  <view class="pageInner" style="padding-bottom: 34rpx">
+    <view class="ppg_section" style="padding-top: 34rpx">
+      <view style="">订单编号</view>
+
+      <view class="weui-loadmore" wx:if="{{loading}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+
+      <view wx:if="{{!loading}}">
+
+        <view style="font-size: 80rpx;color: #09bb07;">{{daySeq}}</view>
+
+        <view class="ppg_eat_time">
+          <view>请在<text style="margin-left:30rpx;margin-right:30rpx">{{formattedTime_1}}</text>准时到店取餐</view>
+          <view class="ppg_eat_time_cue">晚点超过半个小时影响口感，请尽快取餐</view>
+        </view>
+
+        <view class="img-box">
+          <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 400rpx; height: 400rpx;" canvas-id="mycanvas" />
+        </view>
+        <!-- <view class="ppg_seve ">
+            <view  class='ppg_seve_card'>
+                <image src="{{'/images/icon/card.png'}}" style='width:36rpx;height:28rpx;'
+                    /><view style='display:inline-block;margin-left:2rpx;'>  保存到卡包</view>
+            </view>
+            <view style="display:inline-block;color: #e4e4e4;"> | </view>
+            <view class='ppg_seve_pohot'>
+                <image src="{{'/images/icon/poto.png'}}" style='width:36rpx;height:28rpx;'
+                    /><view style='display:inline-block;margin-left:2rpx;'>  保存到相册</view>
+            </view>
+        </view> -->
+
+        <view style="margin-top:42rpx;font-weight: bold; line-height: 1.06;text-align: left;font-size:34rpx;">如何取餐</view>
+        <view class='ppg_howEat_text'>请到门店网络预约专属窗口，告知工作人员编号，并出示二维码被扫码验证，即可取餐
+        </view>
+      </view>
+    </view>
+    <view class="ppg_seperator"> </view>
+    <view class="ppg_section">
+      <view style="display:flex;justify-content: space-between;">
+        <view style="text-align: left">
+          <view style="font-size: 32rpx;margin-top:18rpx; margin-right:18rpx">订单内容：{{ticketSummary}}</view>
+        </view>
+        <view bindtap="toggleDetails">
+            <image class="ppg_toggleIcon" wx:if="{{showDetails}}" src="{{'/images/icon/naixue/hide.png'}}" />
+            <image class="ppg_toggleIcon" wx:else src="{{'/images/icon/naixue/show.png'}}" />
+        </view>
+      </view>
+    </view>
+    <view class="ppg_section" wx:if="{{showDetails}}">
+      <view style="text-align: left">
+        <view style="font-size: 28rpx;">
+          <view style="margin-top: 35rpx"> 取餐门店：
+            <text style="color:#999999">{{storeInfo.storeName || '...'}}</text>
+          </view>
+          <view style="color:#999999">{{storeInfo.address || '...'}}</view>
+          <view style="margin-top: 35rpx">取餐时间：
+            <text>{{formattedTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="ppg_seperator" wx:if="{{showDetails}}"> </view>
+    <view class="ppg_section" wx:if="{{showDetails}}">
+      <view class="ppg_listOfInfo">
+        <view class="ppg_info">
+          <image class="ppg_infoIcon" src="{{'/images/icon/naixue/info.png'}}" />
+          <text>取餐时间30分钟前，可退款</text>
+        </view>
+        <view class="ppg_info">
+          <image class="ppg_infoIcon" src="{{'/images/icon/naixue/info.png'}}" />
+          <text>取餐时间30分钟内，不可退款</text>
+        </view>
+        <view class="ppg_info">
+          <image class="ppg_infoIcon" src="{{'/images/icon/naixue/info.png'}}" />
+          <text>具体解释权归奈雪门店所有，详情电话咨询 0755-7556855</text>
+        </view>
+      </view>
+      <view view style="margin-top: 47rpx">
+        <button class="weui-btn weui-btn_plain-primary" bindtap="requestForRefund">申请退款</button>
+      </view>
+    </view>
+  </view>
+  <view>
+      <image class='ppg_yinbaoLogo' src="{{'/images/icon/yinbaoLogo@2x.png'}}"  />
+  </view>
+</view>

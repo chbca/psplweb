@@ -1,0 +1,100 @@
+/* pages/heartSay/joinvip/joinvip.wxss */
+
+.page {
+  height: 100%;
+  background-color: #f9f9f9;
+  padding-top: 24rpx;
+}
+
+
+.ppg_headImg {
+  width: 564rpx;
+  height: 292rpx;
+  margin: 0 auto;
+  font-size: 0;
+  line-height: 1;
+}
+
+.ppg_headImg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+.ppg_text1 {
+  text-align: center;
+  margin-top: 24rpx;
+  font-size: 32rpx;
+  color: #3A3C4C;
+}
+
+.ppg_text2 {
+  padding: 0 88rpx;
+  margin-top: 44rpx;
+}
+
+.ppg_text2 .ppg_title {
+  font-size: 32rpx;
+  color: #5b6779;
+  margin-bottom: 32rpx;
+}
+
+.ppg_text2 .ppg_items {
+  position: relative;
+}
+
+.ppg_text2 .ppg_items::before {
+  content: '';
+  display: inline-block;
+  width: 2rpx;
+  height: 87%;
+  border-left: 1px solid #d9e1e5;
+  position: absolute;
+  left: 30rpx;
+  top: 10rpx;
+  z-index: 0;
+}
+
+.ppg_text2  .ppg_item image {
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 1;
+  position: absolute;
+  left: 4px;
+  top: 9rpx;
+}
+
+.ppg_text2  .ppg_item {
+  padding-left: 74rpx;
+  font-size: 36rpx;
+  color: #5b6779;
+  position: relative;
+  margin-bottom:26rpx; 
+}
+
+.ppg_button {
+  padding: 60rpx 74rpx;
+}
+
+.ppg_button .ppg_but1 {
+  font-size: 40rpx;
+  color: #fff;
+  line-height: 96rpx;
+  border-radius: 70rpx;
+  text-align: center;
+  box-shadow: 0 1px 1px 0rpx rgba(0, 0, 0, 0.1);
+  background-color: #09bb07;
+  box-sizing: border-box;
+  margin-bottom: 50rpx;
+}
+
+.ppg_button .ppg_but2 {
+  font-size: 40rpx;
+  color: #09bb07;
+  line-height: 96rpx;
+  border-radius: 70rpx;
+  text-align: center;
+  box-shadow: 0 1px 1px 0rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+}

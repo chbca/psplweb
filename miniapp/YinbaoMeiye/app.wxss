@@ -1,0 +1,229 @@
+/**app.wxss**/
+@import 'modules/weui/weui.wxss';
+
+.ppl_test {
+  background-color: red;
+}
+
+.ppl_picker {
+  position: relative;
+  padding-right: 45rpx;
+}
+
+.ppl_picker:before {
+  content: '';
+  height: 0.5rem;
+  width: 0.5rem;
+  display: block;
+  border: 1px solid #555;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  transform: rotate(135deg);
+}
+
+.ppl_more {
+  position: relative;
+  padding-right: 45rpx;
+}
+
+.ppl_more:before {
+  content: '';
+  height: 0.5rem;
+  width: 0.5rem;
+  display: block;
+  border: 1px solid #555;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  transform: rotate(45deg);
+}
+
+.ppl_icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.ppl_pageContainer {
+  padding-top: 2.8rem;
+  padding-bottom: 4rem;
+}
+
+.ppl_header {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 2.6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.3rem 0.3rem;
+  justify-content: space-between;
+}
+
+.ppl_footer {
+  width: 100%;
+  border-top: 1px #e8e9ea solid;
+  position: fixed;
+  bottom: 0;
+}
+
+.ppl_prompt {
+  font-size: 80%;
+  color: #888;
+}
+
+.ppl_borderBefore::after, .ppl_borderAfter::after {
+  content:" ";
+  position:absolute;
+  left:0;
+  right:0;
+  height:1rpx;
+}
+
+.ppl_borderBefore::before {
+  top:0;
+  border-top:1rpx solid #d9d9d9;
+}
+
+.ppl_borderAfter::after {
+  bottom:0;
+  border-bottom:1rpx solid #d9d9d9;
+}
+
+
+/* WEUI extension */
+.weui-mask {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  visibility: hidden;
+}
+
+.weui-mask, .weui-mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.weui-mask.weui-mask--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.weui-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.weui-dialog, .weui-toast {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  opacity: 0;
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+  transform: scale(0.9) translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  visibility: hidden;
+  margin: 0;
+  top: 45%;
+  z-index: 2000;
+}
+
+.weui-dialog.weui-dialog--visible, .weui-toast.weui-dialog--visible, .weui-dialog.weui-toast--visible, .weui-toast.weui-toast--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.weui-dialog__hd {
+    padding: 1.3em 1.6em .5em;
+}
+
+.weui-dialog__bd {
+    padding: 0 1.6em .8em;
+    min-height: 40px;
+    font-size: 15px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #999;
+}
+
+.weui-dialog__ft {
+    position: relative;
+    line-height: 48px;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.weui-dialog__ft:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.weui-dialog__btn {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    color: #3cc51f;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    position: relative;
+}
+
+.weui-dialog .weui-dialog__btn.default, .weui-toast .weui-dialog__btn.default {
+  color: #5f646e;
+}
+
+.weui-dialog .weui-dialog__btn + .weui-dialog__btn,
+.weui-toast .weui-dialog__btn + .weui-dialog__btn {
+  position: relative;
+}
+
+.weui-dialog .weui-dialog__btn + .weui-dialog__btn:after,
+.weui-toast .weui-dialog__btn + .weui-dialog__btn:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+

@@ -1,0 +1,13 @@
+    <view class="ppg_actions"  animation="{{animationData }}" >
+      <view class="ppg_cart" bindtap="showCart"  wx:if="{{totalInCart > 0}}">
+        <image class="ppg_cartIcon" src="{{'/images/icon/store/cartEmpty.png'}}" />
+        <view class="weui-badge">{{totalInCart}}</view>
+      </view>
+      <view class="ppg_cartSum">共
+        <text style="color:#1aad19">{{totalInCart}}</text>份， 需付款
+        <text style="color:#1aad19">{{totalPrice}}</text>元
+      </view>
+      <view>
+        <button style="height:92rpx" class="rounded-0" type="primary" bindtap="confirmOrder">确认下单</button>
+      </view>
+    </view>

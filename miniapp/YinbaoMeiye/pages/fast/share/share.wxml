@@ -1,0 +1,10 @@
+<!--share.wxml-->
+<view class="page">
+    <image src="{{'http://imgw.pospal.cn/we/mini/store/share.png'}}" style="width:100%" mode='widthFix'></image>
+    <view class="ppg_footer">
+        <view class="">
+            <text>在线预约，到店自取告别排队</text>
+            <button type="primary" style="margin-left: 30rpx; margin-right:30rpx"  open-type="share" >分享给好友</button>
+        </view>
+    </view>
+</view>

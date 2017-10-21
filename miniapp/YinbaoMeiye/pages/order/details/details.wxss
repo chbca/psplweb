@@ -1,0 +1,232 @@
+.page {
+  background: #f6f6f6;
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.ppg_topText {
+  font-size: 26rpx;
+  color: #576b95;
+  line-height: 94rpx;
+  text-align: center;
+}
+
+.ppg_content {
+  background: #fff;
+  padding-bottom: 56rpx;
+}
+
+.ppg_content .ppg_round {
+  position: relative;
+}
+
+.ppg_content .ppg_round::after {
+  content: '';
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  bottom: -20rpx;
+  left: -20rpx;
+  border-radius: 40rpx;
+  background: #f6f6f6;
+}
+
+.ppg_content .ppg_round::before {
+  content: '';
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  bottom: -20rpx;
+  right: -20rpx;
+  border-radius: 40rpx;
+  background: #f6f6f6;
+}
+
+.ppg_content .ppg_head {
+  text-align: center;
+}
+
+.ppg_content .ppg_head .ppg_text1 {
+  font-size: 32rpx;
+  color: #818a8d;
+  padding-top: 20rpx;
+}
+
+.ppg_content .ppg_head .ppg_text2 {
+  font-size: 80rpx;
+  color: #576b95;
+}
+
+.ppg_content .ppg_head .ppg_text3 {
+  font-size: 32rpx;
+  color: #3a3c4c;
+  margin-bottom: 60rpx;
+}
+
+.ppg_content .ppg_head .ppg_text4 {
+  margin: 0 20rpx;
+  font-size: 26rpx;
+  color: #818a8d;
+  text-align: left;
+  margin-bottom: 47rpx;
+}
+
+.ppg_content .ppg_head .ppg_QRcode {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-bottom: 6rpx;
+}
+
+.ppg_content .ppg_head .ppg_seveCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #576b95;
+  width: 400rpx;
+  margin: 0 auto;
+  padding-bottom: 50rpx;
+}
+
+.ppg_content .ppg_head .ppg_seveCard image {
+  width: 33rpx;
+  height: 33rpx;
+  vertical-align: -6rpx;
+}
+
+.ppg_content .ppg_head .ppg_seveCard .ppg_up {
+  color: #e4e4e4;
+}
+
+.ppg_content .ppg_body {
+  padding: 30rpx;
+  padding-top: 40rpx;
+}
+
+.ppg_content .ppg_body .ppg_item {
+  display: flex;
+  margin-bottom: 16rpx;
+  font-size: 26rpx;
+}
+
+.ppg_content .ppg_body .ppg_item .ppg_title {
+  color: #818a8d;
+  margin-right: 6rpx;
+}
+
+.ppg_content .ppg_body .ppg_item .ppg_text {
+  color: #000;
+  flex: 1;
+}
+
+.ppg_foot {
+}
+
+.ppg_foot .ppg_text {
+  font-size: 26rpx;
+  color: #818a8d;
+  margin: 30rpx 20rpx;
+}
+
+.ppg_foot .ppg_btns {
+  padding: 0 76rpx;
+}
+
+.ppg_foot .ppg_btns .ppg_btn {
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  letter-spacing: 0;
+  width: 100%;
+  line-height: 80rpx;
+  background-image: linear-gradient(232deg, #ff7fc4 0%, #ffd68c 100%);
+  border-radius: 100rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+}
+
+.ppg_foot .ppg_btns .ppg_btnOK {
+  font-size: 38rpx;
+  text-align: center;
+  color: #576b95;
+  position: relative;
+  line-height: 72rpx;
+  background: linear-gradient(223deg, #ff7fc4 0%, #ffd68c 100%) !important;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0px #0cc,
+                /* Inset shadow */ 0 0 0px #0cc,
+                /* Outset shadow */ inset -999px 0 0 #fff !important;
+  border-radius: 100rpx;
+}
+
+.ppg_dialog {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.60);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.ppg_dialog .ppg_up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 352rpx;
+}
+
+.ppg_dialog .ppg_down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 460rpx;
+}
+
+.ppg_dialog  .ppg_contant {
+  padding-top: 80rpx;
+  background: #fff;
+  margin: 352rpx 45rpx;
+  border-radius: 8rpx;
+  padding-bottom: 50rpx;
+  position: relative;
+}
+
+.ppg_dialog  .ppg_title {
+  text-align: center;
+  font-size: 32rpx;
+  color: #3a3c4c;
+  margin-bottom: 80rpx;
+}
+
+.ppg_dialog .ppg_btn .ppg_yes {
+  margin-left: 60rpx;
+  background-image: linear-gradient(-232deg, #ff7fc4 0%, #ffd68c 100%);
+  border-radius: 100rpx;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 70rpx;
+  display: inline-block;
+  width: 240rpx;
+  text-align: center;
+}
+
+.ppg_dialog .ppg_btn .ppg_not {
+  background: linear-gradient(223deg, #ff7fc4 0%, #ffd68c 100%) !important;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0px #0cc,
+                /* Inset shadow */ 0 0 0px #0cc,
+                /* Outset shadow */ inset -999px 0 0 #fff !important;
+  border-radius: 100rpx;
+  font-size: 32rpx;
+  color: #576b95;
+  line-height: 68rpx;
+  display: inline-block;
+  width: 240rpx;
+  text-align: center;
+  margin-left: 60rpx;
+}

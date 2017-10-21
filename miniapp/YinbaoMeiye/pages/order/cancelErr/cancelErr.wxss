@@ -1,0 +1,42 @@
+.ppg_body {
+  padding: 0 96rpx;
+  padding-top: 88rpx;
+  text-align: center;
+}
+
+.ppg_body .ppg_errImg {
+  font-size: 0;
+  line-height: 1;
+}
+
+.ppg_body .ppg_errImg  image {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+}
+
+.ppg_body .ppg_title {
+  font-size: 32rpx;
+  color: #576b95;
+  margin-bottom: 20rpx;
+}
+
+.ppg_body .ppg_text {
+  font-size: 26rpx;
+  color: #818a8d;
+  letter-spacing: 0;
+  line-height: 42rpx;
+  margin-bottom: 50rpx;
+}
+
+.ppg_body .ppg_btn {
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  letter-spacing: 0;
+  width: 100%;
+  line-height: 80rpx;
+  background-image: linear-gradient(232deg, #ff7fc4 0%, #ffd68c 100%);
+  border-radius: 100rpx;
+}

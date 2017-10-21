@@ -1,0 +1,50 @@
+<!--pages/heartSay/heart.wxml-->
+<view class='page'>
+  <view class='ppg_heartImg'>
+    <image src="{{heartImgUrl}}" mode="aspectFill" bindtap="gotomy"></image>
+  </view>
+
+  <view wx:if='{{isGift}}' class='ppg_hint'>
+    <view class='ppg_hint_1'  bindtap="gotoPresentation">
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/wranIcon@2x.png'></image> 有未赠送礼品卡
+    </view>
+  </view>
+  <view class='ppg_gift_cont'>
+
+    <view class='ppg_gift_title'  bindtap="gotoGiftPay">
+      <text>请爱的人吃月饼</text>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/moreIcon@2x.png'></image>
+    </view>
+    <view class='ppg_gift_items'>
+      <view class='ppg_gift_it' wx:for='{{gifts}}'>
+        <view class='ppg_gift_item'>
+          <image src='{{item.imgsPath}}' mode="aspectFill"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+      <view class='ppg_gift_clear'></view>
+    </view>
+
+
+    <view class='ppg_gift_title'  bindtap="gotoGiftPay">
+      <text>月饼券表心意</text>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/moreIcon@2x.png'></image>
+    </view>
+    <view class='ppg_gift_items'>
+      <view class='ppg_gift_it' wx:for='{{gifts2}}' >
+        <view class='ppg_gift_item'>
+          <image src='{{item.imgsPath}}' mode="aspectFill"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+      <view class='ppg_gift_clear'></view>
+    </view>
+
+  </view>
+  <view class='ppg_gift_but'>
+    <button type='primary' bindtap='gotoJoinVip'>登陆购买享积分</button>
+    <view bindtap='gotoHistory'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/hsIcon@2x.png'></image> 购买记录</view>
+  </view>
+
+</view>

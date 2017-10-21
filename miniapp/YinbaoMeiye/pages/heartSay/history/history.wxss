@@ -1,0 +1,97 @@
+/* pages/heartSay/history/history.wxss */
+
+page {
+  height: 100%;
+}
+
+.page {
+  background-color: #f9f9f9;
+  height: 100%;
+  padding: 20rpx 10rpx;
+}
+
+.ppg_history {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 8rpx;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ppg_history .ppg_head {
+  padding: 56rpx 24rpx;
+  padding-right: 0rpx;
+  border-bottom: 1px dashed #e8e8e8;
+  position: relative;
+}
+
+.ppg_history .ppg_head::after {
+  content: '';
+  display: inline-block;
+  height: 28rpx;
+  width: 28rpx;
+  background: #f9f9f9;
+  border-radius: 28rpx;
+  box-shadow: inset 0px 0 0px 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -13rpx;
+  left: -13rpx;
+}
+
+.ppg_history .ppg_head::before {
+  content: '';
+  display: inline-block;
+  height: 28rpx;
+  width: 28rpx;
+  background: #f9f9f9;
+  border-radius: 28rpx;
+  box-shadow: inset 0px 0 0px 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -13rpx;
+  right: -13rpx;
+}
+
+.ppg_history .ppg_head .ppg_headImg image {
+  width: 208rpx;
+  height: 106rpx;
+  border-radius: 8rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.ppg_history .ppg_head .ppg_title {
+  font-size: 36rpx;
+  color: #3a3c4c;
+}
+
+.ppg_history .ppg_head .ppg_text {
+  font-size: 32rpx;
+  color: #5b6779;
+}
+
+.ppg_history .ppg_foot {
+  padding: 20rpx 24rpx;
+}
+
+.ppg_history .ppg_foot .ppg_price {
+  font-size: 36rpx;
+  color: #ff5556;
+  display: inline-block;
+}
+
+.ppg_history .ppg_foot .ppg_but {
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #09bb07;
+  line-height: 1.6;
+  padding: 8rpx 28rpx;
+  border-radius: 4rpx;
+  float: right;
+}
+
+.ppg_history .ppg_foot .ppg_text {
+  font-size: 26rpx;
+  color: #5b6779;
+  float: right;
+  line-height: 2.5;
+}

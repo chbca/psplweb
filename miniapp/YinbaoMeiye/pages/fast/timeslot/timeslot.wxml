@@ -1,0 +1,92 @@
+<view class="ppg_brand">
+  <image class="ppg_logo" src="{{'/images/icon/naixue/brandLogo.png'}}" />
+  <view class="ppg_storeName">{{storeInfo.storeName || '银豹收银演示'}}</view>
+  <view class="ppg_storeAddr">{{storeInfo.address || '福建省厦门市思明区中航紫金广场A塔36层'}}</view>
+  <view class="ppg_distance">
+    <image class="ppg_addrIcon" src="{{'/images/icon/naixue/addr.png'}}" />{{storeInfo.distance}}公里
+  </view>
+</view>
+
+<view class="ppg_orderSteps">
+  <view class="ppg_orderStep">
+    <view class="ppg_stepNum">1</view>
+    选择预约时间
+  </view>
+  <view class="ppg_orderStep">
+    <view class="ppg_stepNum">2</view>
+    挑选饮品
+  </view>
+  <view class="ppg_orderStep">
+    <view class="ppg_stepNum">3</view>
+    下单支付
+  </view>
+  <view class="ppg_orderStep">
+    <view class="ppg_stepNum">4</view>
+    查收通知,到店自取
+  </view>
+</view>
+<view class="ppg_sectionTitle" wx:if="{{hasData && loaded}}">
+  <image class="ppg_sectionIcon" src="{{'/images/icon/naixue/time.png'}}" /> 请选择预约到店自取的时间</view>
+<view class="ppg_sectionTitle" wx:if="{{!hasData}}">结束营业，预约时间每天12:00-21:00</view> 
+<view class="ppg_times" wx:if="{{hasData}}">
+  <scroll-view scroll-x='true' class="nav-title" scroll-into-view="{{toRangeView}}" scroll-with-animation="true">
+    <block wx:for="{{timeRanges}}" wx:key="*this">
+      <view id="t{{index}}" data-rangeid="{{index}}" class="ppg_time {{selectedRange == index ? 'ppg_timeSelected' : ''}}" bindtap="tapTimeRange">
+        {{item}}
+      </view>
+    </block>
+    <view class="ppg_time ppg_timeLast" wx:if="{{loaded}}">-</view>
+  </scroll-view>
+</view>
+<view class="ppg_sectionTitle" wx:if="{{hasData && loaded}}">每隔10分钟有2个名额放出，约满为止</view>
+<swiper wx:if="{{loaded}}" bindchange="swipeTimes" current="{{selectedRange}}" indicator-dots="{{false}}" autoplay="{{false}}" duration="{{200}}" style="height: 380rpx" >
+  <block wx:for="{{allTimes}}" wx:for-index="rangeIdx" wx:for-item="timeRange" wx:key="name" >
+    <swiper-item>    
+      <view class="ppg_timeSlots" >
+        <view class="ppg_timeSlotsInner">
+          <block wx:for="{{timeRange.timeSlots}}" wx:for-index="slotIdx" wx:for-item="timeSlot" wx:key="name" >
+            <view class="ppg_timeSlot {{timeSlot.name === selectedSlot ? 'ppg_slotSelected' : ''}} {{!timeSlot.available ? 'ppg_timeFull' : ''}} " bindtap="selectTimeSlot" data-slotid='{{slotIdx}}' data-rangeid='{{rangeIdx}}'>
+              <view class="ppg_timeSlotInner">
+                <image class="ppg_selected" src="{{'/images/icon/naixue/selected.png'}}" wx:if="{{timeSlot.name === selectedSlot}}" />
+                <view class="ppg_timeName">
+                  {{timeSlot.name}}
+                </view>
+                <view class="ppg_timeStatus">
+                  <text wx:if="{{timeSlot.count === timeSlot.total}}">已约满</text>
+                  <text wx:if="{{timeSlot.count !== timeSlot.total}}">({{timeSlot.count}}/{{timeSlot.total}})</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="weui-loadmore" wx:if="{{!loaded}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>
+<!--
+<view class="weui-loadmore weui-loadmore_line" wx:if="{{!loading && timeSlots.length === 0}}">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+</view>-->
+
+<view class="ppg_footer" wx:if="{{hasData && loaded}}">
+  <view class="ppg_confirm">
+    <button type="primary" bindtap="confirmAppt">预约</button>
+  </view>
+</view>
+
+<view wx:if="{{isTryBooking}}" class='weui-mask weui-mask--visible'></view>
+<view wx:if="{{isTryBooking}}" class="weui-dialog weui-dialog--visible">
+  <view class="ppg_loadingMsg">
+    <view class="ppg_msgTitle">正在尝试预定时间</view>
+    <view class="ppg_loading">
+      <view class="indicator first"></view>
+      <view class="indicator second"></view>
+      <view class="indicator third"></view>
+    </view>
+  </view>
+</view>

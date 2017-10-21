@@ -1,0 +1,85 @@
+<view class='page'>
+  <view class='ppg_head'>
+    <view class="ppg_title {{!isShowStaffList ? 'ppg_title_open' : '' }}" bindtap='bindShowStaffList'>
+      {{isShowStaffList ? '全部造型师 '+ staffs.length + ' 人' : '收起'}}
+    </view>
+
+    <block wx:if="{{isShowStaffList}}">
+      <scroll-view scroll-x="true" scroll-left="{{scrollDetailsLeft}}" bindscroll="scrollDetails" scroll-into-view="{{toDetailsView}}" scroll-with-animation="true" class='ppg_staffItems' catchtouchstart="touchDetailsStart" catchtouchmove="touchDetailsMove"
+        catchtouchend="touchDetailsEnd" touchcancel="touchDetailsEnd">
+        <view class='ppg_leftNull'></view>
+        <block wx:for="{{staffs}}" wx:for-index="idx" wx:key="Uid">
+          <view class="ppg_item {{detailsIndex == idx? '': 'unselected'}}">
+            <view class='ppg_item_hd' data-uid="{{item.Uid}}">
+              <image src='{{item.PhotoPath}}' class='ppg_staffPhoto' mode='aspectFill' data-uid="{{item.Uid}}"></image>
+              <view class='ppg_text' data-uid="{{item.Uid}}">
+                <view class='ppg_title1' data-uid="{{item.Uid}}">{{item.Name}}</view>
+                <view class='ppg_info' data-uid="{{item.Uid}}">{{item.Remarks}}</view>
+              </view>
+            </view>
+            <view class='ppg_item_ft'>
+              {{item.Tags}}
+            </view>
+          </view>
+        </block>
+        <view class='ppg_leftNull'></view>
+      </scroll-view>
+    </block>
+
+    <block wx:else>
+      <view class='ppg_staffList'>
+        <block wx:for="{{staffs}}" wx:for-index="idx" wx:key="Uid">
+          <view class="ppg_staffItem" bindtap='goStaff' data-uid="{{item.Uid}}">
+            <view class="ppg_headImg {{detailsIndex == idx? 'ppg_staffItemIn': ''}}">
+              <image src='{{item.PhotoPath}}' mode='aspectFill'></image>
+              {{item.Name}}
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view class="ppg_sectionTitle" wx:if="{{staffLoaded && !hasStaffs}}">该项目不可以在线预约</view>
+
+  <view class='ppg_body' wx:if="{{staffLoaded && hasStaffs}}">
+    <view class='ppg_timeTap'>
+      <view wx:for='{{timeRanges}}' wx:key="dateFormat" wx:for-index="idx" class="ppg_timeTap_item {{timeTapIdx == idx ? 'ppg_timeTap__on':''}}" bindtap='bindSelectData' data-timeTapIdx='{{idx}}'>
+        <view class='ppg_tap'>
+          <view>{{item.shortFormat}}</view>
+          <view class='ppg_text'>{{item.localName}}</view>
+        </view>
+      </view>
+      <view class='ppg_getDate'>
+        <picker mode="date" value="{{date}}" start="{{startOfDay}}" end="{{endOfDay}}" bindchange="bindDateChange">
+          <view class='ppg_img'>
+            <image src='http://imgw.pospal.cn/we/mini/order/img/icon/calendar@2x.png'></image>
+          </view>
+          选择日期
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-loadmore" wx:if="{{!timeSlotsLoaded}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+
+    <view class="ppg_sectionTitle" wx:if="{{timeSlotsLoaded && !hasTimeSlots}}">没有可以预约的时间</view>
+
+    <view class="ppg_timeView clearBoth">
+      <view wx:for='{{timeRanges[timeTapIdx].timeSlots}}' wx:key="name" wx:if="{{item.available}}" wx:for-index="idx" bindtap='bindSelectTime' data-timeIndex='{{idx}}' class="ppg_timeItem ">
+        <view class="{{timeIndex == idx ? 'ppg_time__on':''}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='ppg_foot' wx:if="{{staffLoaded && hasStaffs && timeSlotsLoaded}}">
+    <view class='ppg_btn' bindtap='goVerifyPay'>确认预约</view>
+    <view class='ppg_text' bindtap='bindShowProductDetails'>
+      <image src='http://imgw.pospal.cn/we/mini/order/img/icon/details@2x.png'></image>
+      项目详情
+    </view>
+  </view>
+
+</view>

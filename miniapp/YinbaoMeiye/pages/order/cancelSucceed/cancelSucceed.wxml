@@ -1,0 +1,13 @@
+<view class='page'>
+  <view class='ppg_body'>
+    <view class='ppg_img'>
+      <image src='http://imgw.pospal.cn/we/mini/order/img/icon/succeed@2x.png'></image>
+    </view>
+    <view class='ppg_title'>取消成功</view>
+    <view class='ppg_text'>
+      感谢您对本店铺的支持，欢迎再次光临！
+    </view>
+    <view class='ppg_btn'>重新预约</view>
+
+  </view>
+</view>

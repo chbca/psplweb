@@ -1,0 +1,52 @@
+/* pages/heartSay/shop/shop.wxss */
+.page {
+  height: 100%;
+  background-color: #F9F9F9;
+}
+page{
+  height: 100%;
+}
+.ppg_title {
+  background-color: #F3F4F7;
+  text-align: center;
+  font-size: 26rpx;
+  color: #5B6779;
+  line-height: 60rpx;
+
+}
+.ppg_items {
+  padding: 22rpx 22rpx;
+ 
+}
+.ppg_item {
+  border-radius: 4rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16rpx 32rpx;
+  margin-bottom: 20rpx;
+}
+.ppg_item  .ppg_item_hd {
+  flex: 1;
+  border-right: 2rpx solid #F3F4F7;
+  font-size: 32rpx;
+  color: #3A3C4C;
+  line-height: 2;
+}
+.ppg_item  .ppg_item_hd .ppg_shopSite {
+   font-size: 24rpx;
+    color: #99A0A3;
+}
+.ppg_item .ppg_item_ft {
+  text-align: right;
+   font-size: 32rpx;
+  color: #09BB07;
+}
+.ppg_item .ppg_item_ft image {
+  width: 28rpx;
+  height: 36rpx;
+  margin-left: 32rpx;
+  position: relative;
+  top: 6rpx;
+}

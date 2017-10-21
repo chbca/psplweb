@@ -1,0 +1,26 @@
+    <view class="ppg_cartView"  wx:if="{{cartVisible}}">
+      <view class="ppg_cartViewHeader">
+        <view>我的清单</view> 
+        <view class="ppg_cartItemsClear"  bindtap="clearCart">  
+          <image class="ppg_cartClearIcon" src="{{'/images/icon/store/cartClean.png'}}" /> 清空清单
+        </view>
+      </view>
+
+      <block wx:for="{{cartItems}}" wx:key="CartIdx">
+        <view class="ppg_cartItem" wx:if="{{item.ProductNum > 0}}">
+          <view class="ppg_cartItem__hd">
+            <view>{{item.ProductName}}</view>   
+            <view class="ppg_cartItemAttrs">
+              <block wx:for="{{item.CartItemAttributes}}" wx:key="CartIdx"  wx:for-item="attr">
+                <view class="ppg_cartItemAttr">[{{attr.attributeName}}]</view>
+              </block>
+            </view>
+          </view>
+          <view class="ppg_operate">
+            <view class="ppg_operateBtn" bindtap="tapCartMinus" ><image data-cartidx="{{item.CartIdx}}" src="{{'/images/icon/store/minus.png'}}" /></view>
+            <view class="ppg_operateNum">{{item.ProductNum}}</view>
+            <view class="ppg_operateBtn" bindtap="tapCartAdd"><image data-cartidx="{{item.CartIdx}}" src="{{'/images/icon/store/add.png'}}" /></view>
+          </view>
+        </view>
+      </block>
+    </view>

@@ -1,0 +1,31 @@
+<view class="ppg_brand">
+  <image mode="aspectFill" class="ppg_logo" src="{{'http://imgw.pospal.cn/we/mini/store/brandLogo.png'}}" />
+  <view class="ppg_storeName">{{storeInfo.storeName || '美业预约'}}</view>
+</view>
+
+<view class="ppg_filter_bar">
+  <input placeholder="输入门店名称" bindinput="inputFilter" bindconfirm="doFilter"></input>
+  <view class="ppg_filter_btn_container">
+    <image src="http://imgw.pospal.cn/we/mini/order/img/icon/search@2x.png" bindtap="doFilter"></image>
+  </view>
+</view>
+<view class="weui-loadmore" wx:if="{{loading}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>
+<view class="ppg_store_list_container">
+  <view wx:for="{{viewStores}}" wx:for-item="store" wx:key="StoreId" bindtap="selectStore" data-storeid='{{store.StoreId}}' class="ppg_store">
+    <view class="ppg_table">
+      <view class="ppg_tr">
+          <view class="ppg_td ppg_store_icon_container">
+              <image class="ppg_store_icon" src="http://imgw.pospal.cn/we/mini/order/img/icon/shop@2x.png"></image>
+          </view>
+          <view class="ppg_td">
+              <view class="ppg_store_name">{{store.Name}}</view>
+              <view class="ppg_store_address">{{store.Address}}</view>
+          </view>
+          <view class="ppg_td ppg_store_distance">{{store.Distance}}</view>
+      </view>
+    </view>
+  </view>
+</view> 

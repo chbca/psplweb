@@ -1,0 +1,21 @@
+<!--pages/order/home/home.wxml-->
+<view class='page'>
+  <view class='ppg_search'>
+    <image src='http://imgw.pospal.cn/we/mini/order/img/icon/time@2x.png'></image>
+    <view class='ppg_title' bindtap='goMyOrder'>我的预约</view>
+    <view class='ppg_input clearBoth'>
+      <image src='http://imgw.pospal.cn/we/mini/order/img/icon/search1@2x.png'></image>
+      <input type='text' placeholder="搜索" placeholder-class='ppg_inputPlace'></input>
+    </view>
+  </view>
+  
+  <include src="_slider.wxml" />
+
+  <view class='ppg_body'>
+    <include src="_categoryList.wxml" /> 
+    <view class='ppg_content'>
+       <include src="_products.wxml" />
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,129 @@
+/* pages/heartSay/wait/wait.wxss */
+
+.page {
+}
+
+.ppg_headImg {
+  font-size: 0;
+  line-height: 1;
+  z-index: 0;
+}
+
+.ppg_headImg image {
+  width: 100%;
+  height: 432rpx;
+}
+
+.ppg_title {
+  width: 690rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.10);
+  z-index: 1;
+  padding-left: 240rpx;
+  padding-right: 20rpx;
+  padding-top: 24rpx;
+  box-sizing: border-box;
+  /* top: -76rpx; */
+  transform: translateY(-50%);
+  border-radius: 4rpx;
+}
+
+.ppg_title image {
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  z-index: 2;
+  top: -40rpx;
+  left: 20rpx;
+  border-radius: 4rpx;
+}
+
+.ppg_title text {
+  font-size: 32rpx;
+  color: #5b6779;
+  line-height: 1.5;
+  display: inline-block;
+}
+
+.ppg_title .ppg_text1 {
+  font-size: 32rpx;
+  color: #5b6779;
+  line-height: 1.6;
+
+}
+
+.ppg_gift {
+  margin: 0 auto;
+  width: 600rpx;
+  font-size: 0;
+  line-height: 1;
+  text-align: center;
+}
+.ppg_gift .ppg_text {
+  font-size: 32rpx;
+  color: #5B6779;
+  text-align: center;
+  position: relative;
+  top: -30rpx;
+}
+.ppg_gift image {
+  width: 380rpx;
+  height: 246rpx;
+  border-radius: 18rpx;
+  box-shadow: 0 8rpx 20rpx 1px rgba(0,0,0,0.10);
+  line-height: 1.5;
+}
+
+.ppg_gift .ppg_name {
+  font-size: 36rpx;
+  color: #3A3C4C;
+  margin-top: 22rpx;
+  text-align: center;
+    line-height: 1.7;
+}
+
+.ppg_gift .ppg_price {
+  font-size: 32rpx;
+  color: #ff5556;
+  text-align: center;
+}
+
+.ppg_foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #09bb07;
+  text-align: center;
+  line-height: 76rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.ppg_foot image {
+  width: 34rpx;
+  height: 34rpx;
+  position: relative;
+  top: 6rpx;
+}
+
+
+
+.ppg_foot2 {
+  position: fixed;
+  bottom: 32rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26rpx;
+  color: #576b95;
+}
+
+.ppg_foot2  .ppg_give, .ppg_foot2 .ppg_cards {
+  display: inline-block;
+}
+
+.ppg_foot2 .ppg_cards {
+  margin-left: 40rpx;
+}

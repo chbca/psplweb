@@ -1,0 +1,41 @@
+<!--pages/heartSay/login/login.wxml-->
+<view class='page'>
+  <view class='ppg_head'>
+    <view class='ppg_headImg'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/etc/head.png' mode='aspectFill'></image>
+    </view>
+
+    <view class='ppg_title'>
+      <view class="ppg_password {{isPassword ? 'ppg_ace' : ''}}" bindtap='tapView'>密码登录</view>
+      <view class="ppg_message {{isPassword ? '' : 'ppg_ace'}}" bindtap='tapView'>短信验证码</view>
+    </view>
+  </view>
+
+  <view class='ppg_inputCont'>
+    <view class='ppg_itmes'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/username.png'></image>
+      <input type='text' 
+      placeholder="{{isPassword ? '请输入会员号或手机号码' : '请输入手机号码'}}" placeholder-class='ppg_Input'></input>
+    </view>
+    <view class='ppg_itmes'>
+      <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/password.png'></image>
+      <input type='text'  class='ppg_passwordInput'
+      placeholder="{{isPassword ? '请输入密码' : '验证码'}}"    placeholder-class='ppg_Input'></input>
+
+      <view wx:if='{{!isPassword}}' class='ppg_timeout'>
+        <view wx:if='{{isTimeout}}' class='ppg_text1' bindtap='timeoutShow'>获取验证码</view>
+        <view wx:else class='ppg_text2'>40s后重新获取</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='ppg_loginButton'>
+    <button>{{isPassword ? '登陆' : '注册并登录'}}</button>
+  </view>
+
+  <view wx:if='{{isPassword}}' class='ppg_footline ' bindtap='tapView'>
+    <image src='http://imgw.pospal.cn/we/mini/heart/img/icon/loginline.png'></image>
+    <text class='ppg_lineText'>立即注册</text>
+  </view>
+
+</view>

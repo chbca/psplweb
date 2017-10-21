@@ -1,0 +1,19 @@
+
+<template name='timeslotTemplate' >
+    <view class="ppg_timeSlotsInner">
+      <block wx:for="{{listItem.timeSlots}}" wx:for-index="slotIdx" wx:key="name" >
+        <view class="ppg_timeSlot {{ (item.available !== -1 && slotIdx === selectedSlot) ? 'ppg_slotSelected' : ''}} {{(item.available !== -1 && !item.available ) ? 'ppg_timeFull' : ''}} " bindtap="selectTimeSlot" data-slotid='{{slotIdx}}'>
+          <view class="ppg_timeSlotInner">
+            <image class="ppg_selected" src="{{'/images/icon/naixue/selected.png'}}" wx:if="{{item.available !== -1 && slotIdx === selectedSlot}}" />
+            <view class="ppg_timeName">
+              {{item.name}}
+            </view>
+            <view class="ppg_timeStatus" wx:if="{{item.available !== -1}}">
+              <text wx:if="{{!item.available}}">已约满</text>
+              <text wx:if="{{item.available}}">({{item.count}}/{{item.total}})</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+</template>

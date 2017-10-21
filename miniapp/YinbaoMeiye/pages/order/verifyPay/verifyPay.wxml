@@ -1,0 +1,56 @@
+<view class='page'>
+  <!-- <view class='ppg_topText'>下单剩余时间 09:59</view> -->
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='ppg_content'>
+      <view class='ppg_head'>
+        <view class='ppg_title'> 预约信息</view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>预约门店：</view>
+          <view class='ppg_text'>{{shopName}}</view>
+        </view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>预约时间：</view>
+          <view class='ppg_text'>{{appointmentTime}}</view>
+        </view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>预约技师：</view>
+          <view class='ppg_text'>{{staffName}}</view>
+        </view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>项目名称：</view>
+          <view class='ppg_text'>{{productName}}</view>
+        </view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>项目价格：</view>
+          <view class='ppg_text'>¥{{productPrice}} （实际价格以门店消费为准）</view>
+        </view>
+      </view>
+
+      <view class='ppg_body' wx:if="{{customerLoaded}}">
+        <view class='ppg_title'> 验证信息</view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>
+            <image src='http://imgw.pospal.cn/we/mini/order/img/icon/my@2x.png'></image>
+            姓名：</view>
+          <input name="customerName" type='text' placeholder='' value='{{customerName}}' placeholder-class='ppg_in' bindinput="bindNameInput"></input>
+        </view>
+        <view class='ppg_item'>
+          <view class='ppg_title'>
+            <image src='http://imgw.pospal.cn/we/mini/order/img/icon/phone@2x.png'></image>
+            电话：</view>
+          <input name="customerTel" type='number' maxlength="11" placeholder='' value='{{customerTel}}' placeholder-class='ppg_in' bindinput="bindPhoneInput"></input>
+        </view>
+        <view class='ppg_item' wx:if="{{requiredCode}}">
+          <view class='ppg_title'>
+            <image src='http://imgw.pospal.cn/we/mini/order/img/icon/authCode@2x.png'></image>
+            验证码：</view>
+          <input name="securityCode" type='number' maxlength="8" placeholder='' placeholder-class='ppg_in' bindinput="bindPwdInput"></input>
+          <view class="ppg_btn1 {{isTimeDowm ? 'ppg_btn2': ''}} " bindtap='bindSendCode'>发送验证码 {{isTimeDowm ? '('+ time +'s)': ''}} </view>
+        </view>
+      </view>
+    </view>
+    <view class='ppg_foot'>
+      <view class='ppg_btn' bindtap='formSubmit'>提交</view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,15 @@
+<block wx:for="{{products}}" wx:key="id"  wx:for-index="productIdx">
+  <view id="d{{item.id}}" class="ppg_item" wx:if="{{!item.isOutOfStock}}"  bindtap="tapProduct" data-index="{{productIdx}}">
+    <view class='ppg_item_hd'>
+      <image src='{{item.defaultproductimage.imagepath}}'></image>
+    </view>
+    <view class='ppg_item_bd'>
+      <view class='ppg_title'>{{item.productDisplayName}}</view>
+      <view class='ppg_text'>{{item.description}}</view>
+      <view class='ppg_price'>￥{{item.sellPrice}}
+        <text class='ppg_text2'>[免费预约]</text>
+      </view>
+    </view>
+    <view class='ppg_item_ft'></view>
+  </view>
+</block>

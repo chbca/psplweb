@@ -1,0 +1,27 @@
+<view class='page'>
+  <view class='ppg_head'>
+    <image class='ppg_headImg' src='{{shopHeadImg}}'></image>
+    <view class='ppg_shopName'>{{shopName}}</view>
+  </view>
+
+  <view class='ppg_search clearBoth'>
+    <image class='ppg_icon1' src='http://imgw.pospal.cn/we/mini/order/img/icon/map@2x.png'></image>
+    <view class='ppg_address'>{{shopAddress}}</view>
+    <view class='ppg_searchIcon'>
+      <image src='http://imgw.pospal.cn/we/mini/order/img/icon/search@2x.png'></image>
+    </view>
+  </view>
+
+  <view class='ppg_content'>
+    <view wx:for='{{shopList}}' class='ppg_item ' bindtap='goHome'>
+      <image src='http://imgw.pospal.cn/we/mini/order/img/icon/shop@2x.png'></image>
+      <view class='ppg_name'>
+        <view>{{item.name}}</view>
+        <view class='ppg_shopAddress'>{{item.address}}</view>
+      </view>
+      <view class='ppg_distance'>{{item.distance}}</view>
+    </view>
+  </view>
+
+
+</view>

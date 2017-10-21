@@ -1,0 +1,24 @@
+<view class='page'>
+  <view class='ppg_items'>
+
+    <view wx:for='{{appointments}}' class='ppg_item' data-uid="{{item.Uid}}" bindtap='goHistory'>
+      <view class='ppg_itme_hd'>
+        <view class='ppg_time'>
+          预约时间：{{item.DateStart}}
+        </view>
+        <view class="ppg_text {{item.Status == 0 ? 'ppg_btn':''}}">{{ item.StatusText}}
+        </view>
+      </view>
+      <view class='ppg_itme_bd'>
+        <view class='ppg_headImg'>
+          <image src='{{item.StaffPhoto}}' mode='aspectFill'></image>
+        </view>
+        <view class='ppg_cont'>
+          <view class='ppg_title'>{{item.ServiceName}}</view>
+          <view class='ppg_text'>{{item.ServiceDesc}}</view>
+          <view class='ppg_price'>￥{{item.ServicePrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

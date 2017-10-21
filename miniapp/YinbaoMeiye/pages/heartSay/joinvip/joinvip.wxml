@@ -1,0 +1,20 @@
+<!--pages/heartSay/joinvip/joinvip.wxml-->
+<view class='page'>
+  <view class='ppg_headImg'>
+    <image src='{{giftImgPath}}' mode='aspectFill'></image>
+  </view>
+  <view class='ppg_text1'>将此礼卡绑定到会员帐户 攒积分 享好礼</view>
+  <view class='ppg_text2'>
+    <view class='ppg_title'>会员优势：</view>
+    <view class='ppg_items'>
+      <view wx:for='{{texts}}' class='ppg_item'>
+        <image src='{{item.iconPath}}'></image> {{item.text}}
+      </view>
+    </view>
+  </view>
+  <view class='ppg_button'>
+    <view class='ppg_but1' bindtap='gotoLogin'>注册会员</view>
+    <view class='ppg_but2'>绑定至账户</view>
+  </view>
+
+</view>

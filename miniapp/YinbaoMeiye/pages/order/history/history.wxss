@@ -1,0 +1,43 @@
+.ppg_topText {
+  font-size: 26rpx;
+  color: #576b95;
+  line-height: 56rpx;
+  text-align: center;
+  background: #f6f6f6;
+}
+
+.ppg_body {
+  padding: 50rpx;
+}
+
+.ppg_body .ppg_item {
+  display: flex;
+  margin-bottom: 16rpx;
+  font-size: 26rpx;
+}
+
+.ppg_body .ppg_item .ppg_title {
+  color: #818a8d;
+  margin-right: 6rpx;
+}
+
+.ppg_body .ppg_item .ppg_text {
+  color: #000;
+  flex: 1;
+}
+
+.ppg_foot {
+  margin-top: 14rpx;
+  padding: 0 96rpx;
+}
+
+.ppg_foot .ppg_btn {
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  letter-spacing: 0;
+  width: 100%;
+  line-height: 80rpx;
+  background-image: linear-gradient(232deg, #ff7fc4 0%, #ffd68c 100%);
+  border-radius: 100rpx;
+}

@@ -1,0 +1,35 @@
+<view class='page'>
+  <view class='weui-cells ppg_details'>
+    <view class='weui-cell'>
+      <view class='weui-cell__hd'>
+        <image class='ppg_icon1' src='http://imgw.pospal.cn/we/mini/heart/img/icon/hsIcon@2x.png'></image>
+      </view>
+      <view class='weui-cell__bd'>
+        <view class='ppg_title'>有效日期 </view>
+        <text class='ppg_text'>{{time}}</text>
+      </view>
+    </view>
+
+    <view wx:if='{{isShowPrice}}'  class='weui-cell'>
+      <view class='weui-cell__hd'>
+        <image class='ppg_icon2'src='http://imgw.pospal.cn/we/mini/heart/img/icon/cardPayIcon@2x.png'></image>
+      </view>
+      <view class='weui-cell__bd'>
+        <view class='ppg_title'>购买价格 </view>
+        <text class='ppg_text'>当季特饮<text class='ppg_price'>{{price}}</text>元</text>
+      </view>
+    </view>
+
+    <view class='weui-cell'>
+      <view class='weui-cell__hd'>
+        <image class='ppg_icon3' src='http://imgw.pospal.cn/we/mini/heart/img/icon/uesTextIcon@2x.png'></image>
+      </view>
+      <view class='weui-cell__bd'>
+        <view class='ppg_title'>使用须知 </view>
+        <text class='ppg_text'>{{useText}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,33 @@
+<!--pages/order/history/history.wxml-->
+<view class='page'>
+  <view class='ppg_topText'>觉得很方便，快去分享告诉好友吧</view>
+  <view class='ppg_body'>
+    <view class='ppg_item'>
+      <view class='ppg_title'>订单状态：</view>
+      <view class='ppg_text'>{{orderStatus}}</view>
+    </view>
+    <view class='ppg_item'>
+      <view class='ppg_title'>预约门店：</view>
+      <view class='ppg_text'>{{shopName}}</view>
+    </view>
+    <view class='ppg_item'>
+      <view class='ppg_title'>预约时间：</view>
+      <view class='ppg_text'>{{appointmentTime}}</view>
+    </view>
+    <view class='ppg_item'>
+      <view class='ppg_title'>预约技师：</view>
+      <view class='ppg_text'>{{staffName}}</view>
+    </view>
+    <view class='ppg_item'>
+      <view class='ppg_title'>项目名称：</view>
+      <view class='ppg_text'>{{productName}}</view>
+    </view>
+    <view class='ppg_item'>
+      <view class='ppg_title'>项目价格：</view>
+      <view class='ppg_text'>¥{{productPrice}} （实际价格以门店消费为准）</view>
+    </view>
+  </view>
+  <view class='ppg_foot'>
+    <view class='ppg_btn'  bindtap='orderAgain' >重新预约</view>
+  </view>
+</view>

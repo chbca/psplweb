@@ -1,0 +1,101 @@
+/* pages/order/order.wxss */
+page {
+  height: 100%;
+   background-color: #f8f8f8; 
+}
+.page {
+  font-size: 34rpx;
+  color: #5a5a5a;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.pageInner {
+  margin: 20rpx;
+}
+
+.ppg_section {
+  padding: 0 34rpx ;
+}
+
+.img-box {
+  padding: 32rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.img-box image {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+
+.weui-btn+.weui-btn {
+  margin-top: 15px;
+}
+
+.weui-btn_plain-primary {
+  color: #1aad19;
+  border: 1px solid #1aad19;
+  background: none;
+  width: 360rpx;
+}
+
+.ppg_seperator {
+  margin: 30rpx 0;
+  height: 20rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  position: relative;
+}
+
+
+.ppg_seperator:before, .ppg_seperator:after {
+  content: " ";
+  width: 20rpx;
+  height: 40rpx;
+  background: #f5f5f5;
+  box-shadow: inset 0 5rpx 10rpx 0 rgba(25, 151, 127, 0.08);
+  position: absolute;
+  top: 0rpx;
+}
+
+.ppg_seperator:before {
+  border-radius: 0 20rpx 20rpx 0;
+  left: -4rpx;
+  border-top: 1rpx solid #f8f8f8;
+  border-right: 1rpx solid #f8f8f8;
+}
+
+.ppg_seperator:after {
+  border-radius: 20rpx 0 0 20rpx;
+  left: auto;
+  right: -4rpx;
+  border-left: 1rpx solid #f8f8f8;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+
+.ppg_info {
+  text-align: left;
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.ppg_info text{
+  display: inline-block;
+  margin-left: 43rpx;
+}
+
+.ppg_infoIcon {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  position: absolute;
+  top:2rpx;
+}
+
+.ppg_listOfInfo {
+  font-size: 28rpx;
+  line-height: 1.29;
+  color: #999;
+}
+
