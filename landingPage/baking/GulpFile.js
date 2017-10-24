@@ -51,7 +51,9 @@ gulp.task('sprite-icon', function () {
     var spriteData = gulp.src('workspace/sprites/icons/*.png').pipe(spritesmith({
         imgName: 'icons.png',
         cssName: 'icons.css',
-        padding: 5
+        padding: 6,
+        algorithm: 'binary-tree',
+        cssTemplate: "handelbarstr.less",
     }));
 
     // Pipe image stream through image optimizer and onto disk
