@@ -1,9 +1,0 @@
-<view style="display: flex; justify-content: center">
-    <scroll-view class="ppg_products" scroll-x="true" scroll-with-animation="true" scroll-into-view="{{toMiniView}}">
-      <block wx:for="{{products}}" wx:key="id">
-        <view id="p{{item.id}}" data-productid="{{item.id}}" bindtap="tapProduct" class="ppg_product {{product.id == item.id ? 'ppg_productSelected' : ''}}">
-          <image mode="aspectFill" class="ppg_productImage" src="{{item.defaultproductimage.imagepath}}"></image>
-        </view>
-      </block>
-    </scroll-view>
-</view>

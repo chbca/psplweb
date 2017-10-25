@@ -1,7 +1,0 @@
-  <scroll-view class="ppg_categories" scroll-x="true" scroll-with-animation="true" >
-    <block wx:for="{{categories}}" wx:key="CategoryId"  wx:for-index="catIdx" >
-      <view id="c{{item.CategoryId}}" data-categoryid="{{item.CategoryId}}" bindtap="tapCategory" class="ppg_block {{categoryId == item.CategoryId ? 'ppg_showView' : ''}}">
-        {{item.DisplayName}}
-      </view>
-    </block>   
-  </scroll-view>

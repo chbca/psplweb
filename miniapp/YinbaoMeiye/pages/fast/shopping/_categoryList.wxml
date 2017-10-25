@@ -1,8 +1,0 @@
-  <scroll-view class="ppg_categories" scroll-x="true" scroll-with-animation="true" bindscroll="scrollCategories" scroll-into-view="{{toCategoryView}}">
-    <block wx:for="{{categories}}" wx:key="CategoryId"  wx:for-index="catIdx" >
-      <view id="c{{item.CategoryId}}" data-categoryid="{{item.CategoryId}}" bindtap="tapCategory" class="ppg_category {{categoryId == item.CategoryId ? 'ppg_categorySelected' : ''}}">
-        {{item.DisplayName}}
-      </view>
-    </block>
-    <view class="ppg_category ppg_categoryLast" wx:if="{{loaded}}">-</view>      
-  </scroll-view>
