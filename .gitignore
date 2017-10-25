@@ -286,3 +286,9 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+
+#skull
+*.idea
+landingPage/baking/node_modules/
+landingPage/baking/css/
