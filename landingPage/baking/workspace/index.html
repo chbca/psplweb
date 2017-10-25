@@ -115,7 +115,7 @@
     <div class="container">
         <h2 class="block-title ani-block-title2">烘焙特色功能</h2>
     </div>
-    <section>
+    <section class="prepaid">
         <div class="container">
             <div class="left pic">
                 <img class="pic-prepaid1" src="images/prepaid1.png" alt="">
@@ -217,10 +217,10 @@
         </div>
     </section>
 </div>
-<div class="block">
-    <section class="promotion">
-    </section>
-</div>
+<!--<div class="block">-->
+    <!--<section class="promotion">-->
+    <!--</section>-->
+<!--</div>-->
 <div class="free">
     <div class="container">
         <h4 class="title">免费体验银豹烘焙版</h4>
@@ -251,7 +251,10 @@
     </div>
 </div>
 </body>
+<!-- build:js js/scrollreveal.min.js -->
 <script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<!-- endbuild -->
+
 <script>
     window.onload = function () {
         // 设置导航栏的颜色
@@ -330,8 +333,6 @@
         scale: 1,
         reset: true
     });
-//        sr.reveal('.wide-screen', {duration: 1000, scale:.9,reset:true});
-    //        sr.reveal('.wechat-app', {duration: 1000, scale:.9, reset: true});
     sr.reveal('.pic-mobile-bg', {duration: 1000, origin: "top", distance: '0'});
     sr.reveal('.pic-mobile', {
         duration: 500,
