@@ -113,7 +113,7 @@
 </div>
 <div class="block block2 special">
     <div class="container">
-        <h2 class="block-title">烘焙特色功能</h2>
+        <h2 class="block-title ani-block-title2">烘焙特色功能</h2>
     </div>
     <section>
         <div class="container">
@@ -175,7 +175,7 @@
 </div>
 <div class="block block2 value-added">
     <div class="container">
-        <h2 class="block-title">烘焙增值功能</h2>
+        <h2 class="block-title ani-block-title3">烘焙增值功能</h2>
     </div>
     <section>
         <div class="container">
@@ -226,22 +226,22 @@
         <h4 class="title">免费体验银豹烘焙版</h4>
         <hr/>
         <div class="free-block">
-            <ul class="list">
-                <li><span class="icon icon-checked"></span>连锁管理</li>
-                <li><span class="icon icon-checked"></span>预约提醒</li>
-                <li><span class="icon icon-checked"></span>进销存</li>
-                <li><span class="icon icon-checked"></span>精准CRM营销</li>
-                <li><span class="icon icon-checked"></span>微信店铺</li>
-                <li><span class="icon icon-checked"></span>会员管理</li>
-                <li><span class="icon icon-checked"></span>货流与供应链</li>
+            <ul class="list" id="list1">
+                <li class="ani-li"><span class="icon icon-checked"></span>连锁管理</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>预约提醒</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>进销存</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>精准CRM营销</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>微信店铺</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>会员管理</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>货流与供应链</li>
             </ul>
-            <ul class="list">
-                <li><span class="icon icon-checked"></span>移动CRM</li>
-                <li><span class="icon icon-checked"></span>自定义企业Logo</li>
-                <li><span class="icon icon-checked"></span>微信登录验证</li>
-                <li><span class="icon icon-checked"></span>专属1对1技术支持</li>
-                <li><span class="icon icon-checked"></span>系统部署、迁移服务</li>
-                <li><span class="icon icon-checked"></span>支持开放API</li>
+            <ul class="list" id="list2">
+                <li class="ani-li"><span class="icon icon-checked"></span>移动CRM</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>自定义企业Logo</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>微信登录验证</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>专属1对1技术支持</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>系统部署、迁移服务</li>
+                <li class="ani-li"><span class="icon icon-checked"></span>支持开放API</li>
             </ul>
         </div>
         <a class="btn btn-free" href="#">
@@ -255,21 +255,37 @@
 <script>
     window.onload = function () {
         // 设置导航栏的颜色
-        var navigation = document.getElementById('navigation');
+        setNavStyle();
         window.onscroll = function () {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            scrollTop > 160 ? navigation.classList.add("navigation-scrolled")
-                : navigation.classList.remove("navigation-scrolled");
+            setNavStyle();
         }
+    }
+
+    function setNavStyle () {
+        var navigation = document.getElementById('navigation');
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        scrollTop > 160 ? navigation.classList.add("navigation-scrolled")
+            : navigation.classList.remove("navigation-scrolled");
     }
 
     window.sr = ScrollReveal({
         reset: false, // 不重复动画
-        easing: "ease"
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
     });
     var feature = document.getElementById('feature');
     sr.reveal('li', {container: feature, easing: 'ease-in-out', scale: 1, delay: 1000,}, 50);
-    sr.reveal('.block h2', {
+    sr.reveal('.ani-block-title1', {
+        duration: 1000,
+        scale: 1,
+        origin: "top", distance: "20px"
+    });
+    sr.reveal('.ani-block-title2', {
+        duration: 1000,
+        scale: 1,
+        origin: "top", distance: "20px"
+    });
+
+    sr.reveal('.ani-block-title3', {
         duration: 1000,
         scale: 1,
         origin: "top", distance: "20px"
@@ -279,37 +295,55 @@
         duration: 1000,
         delay: 500,
         scale: 1,
-        origin: "top", distance: "20px"
+        origin: "bottom", distance: "20px"
     });
 
     sr.reveal('.content p', {
         duration: 1000,
-        delay: 700,
+        delay: 600,
         scale: 1,
-        origin: "top", distance: "30px"
+        origin: "bottom", distance: "30px"
     });
 
     sr.reveal('.pic-prepaid1', {
         delay: 500,
         duration: 500,
-        scale:1
+        scale: 1
     });
-    sr.reveal('.pic-prepaid2', {duration: 1000, scale: 1});
+    sr.reveal('.pic-prepaid2', {duration: 1000, scale: 1, reset: true});
 
     sr.reveal('.pic-promotion-bg', {duration: 1000});
     sr.reveal('.pic-promotion-mac', {duration: 1000});
-    sr.reveal('.pic-promotion-ticket1', {duration: 500, delay: 500, origin: "right", distance: '20px', scale: 1});
-    sr.reveal('.pic-promotion-ticket2', {duration: 500, delay: 500, origin: "left", distance: '20px', scale: 1});
-    //    sr.reveal('.wide-screen', {duration: 1000, scale:.9});
-    //    sr.reveal('.wechat-app', {duration: 1000, scale:.9});
-    sr.reveal('.pic-mobile-bg', {duration: 1000});
-    sr.reveal('.pic-mobile', {duration: 500, origin: "bottom", distance: "64px",easing:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"});
+    sr.reveal('.pic-promotion-ticket1', {
+        duration: 500,
+        delay: 500,
+        origin: "right",
+        distance: '20px',
+        scale: 1,
+        reset: true
+    });
+    sr.reveal('.pic-promotion-ticket2', {
+        duration: 500,
+        delay: 500,
+        origin: "left",
+        distance: '20px',
+        scale: 1,
+        reset: true
+    });
+//        sr.reveal('.wide-screen', {duration: 1000, scale:.9,reset:true});
+    //        sr.reveal('.wechat-app', {duration: 1000, scale:.9, reset: true});
+    sr.reveal('.pic-mobile-bg', {duration: 1000, origin: "top", distance: '0'});
+    sr.reveal('.pic-mobile', {
+        duration: 500,
+        reset: true
+    });
     sr.reveal('.pic-wechat1', {
         duration: 500,
         origin: "bottom",
         distance: "150px",
-        scale:1,
-        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+        scale: 1,
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        reset: true
     });
     sr.reveal('.pic-wechat2', {
         duration: 500,
@@ -317,10 +351,10 @@
         origin: "bottom",
         distance: "150px",
         scale: 1,
-        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        reset:true
     });
-     sr.reveal('.pic-marketing', {duration: 1000});
-
+    sr.reveal('.pic-marketing', {duration: 1000, reset: true});
 
 </script>
 </html>
