@@ -265,6 +265,9 @@ li {
 .promotion {
   background: #f4f3f3;
 }
+.mobile {
+  background: #fff;
+}
 .pic-promotion-bg {
   top: 167px;
   left: -58px;
@@ -346,6 +349,9 @@ li {
 .wechat-app {
   background: #fff url(../images/wechat_app.png) top center no-repeat;
   background-size: cover;
+}
+.marketing {
+  background: #eee;
 }
 .pic-marketing {
   top: 122px;
