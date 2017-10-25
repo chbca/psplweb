@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<nav class="navigation">
+<nav class="navigation" id="navigation">
     <a class="navigation-logo" href="#">
         <img src="images/logo.png" alt="银豹"/>
     </a>
-    <a class="navigation-download" href="#">免费下载</a>
+    <a class="btn navigation-download" href="#">免费下载</a>
 </nav>
 <div class="banner">
     <div class="container container-s">
@@ -54,8 +54,8 @@
 <div class="block system">
 
     <div class="container container-s">
-        <h2 class="block-title">懂你的烘焙收银系统</h2>
-        <ul class="feature">
+        <h2 class="block-title ani-block-title1">懂你的烘焙收银系统</h2>
+        <ul class="feature" id="feature">
             <li>
                 <span class="icon-feature">
                     <span class="icon icon-multi-equipment"></span>
@@ -143,10 +143,10 @@
     <section class="promotion">
         <div class="container">
             <div class="left pic">
-                <img class="pic-promotion1" src="images/promotion_bg.png" alt="">
-                <img class="pic-promotion2" src="images/ticket1.png" alt="">
-                <img class="pic-promotion3" src="images/ticket2.png" alt="">
-                <img class="pic-promotion4" src="images/mac.png" alt="">
+                <img class="pic-promotion-bg" src="images/promotion_bg.png" alt="">
+                <img class="pic-promotion-ticket1" src="images/ticket1.png" alt="">
+                <img class="pic-promotion-ticket2" src="images/ticket2.png" alt="">
+                <img class="pic-promotion-mac" src="images/mac.png" alt="">
             </div>
             <div class="right content">
                 <h4>花式促销手段 笼络顾客</h4>
@@ -166,8 +166,8 @@
                     连锁商品一键复制，会员统一管理，促销同步推</p>
             </div>
             <div class="right pic">
-                <img class="pic-mobile1" src="images/mobile1.png" alt="">
-                <img class="pic-mobile2" src="images/mobile2.png" alt="">
+                <img class="pic-mobile" src="images/mobile1.png" alt="">
+                <img class="pic-mobile-bg" src="images/mobile2.png" alt="">
             </div>
         </div>
     </section>
@@ -187,7 +187,8 @@
                     微信推送引导顾客消费，长期锁定目标客户</p>
             </div>
             <div class="right pic">
-                <img class="pic-wechat" src="images/wechat.png" alt="">
+                <img class="pic-wechat1" src="images/wechat1.png" alt="">
+                <img class="pic-wechat2" src="images/wechat2.png" alt="">
             </div>
         </div>
     </section>
@@ -250,4 +251,76 @@
     </div>
 </div>
 </body>
+<script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+    window.onload = function () {
+        // 设置导航栏的颜色
+        var navigation = document.getElementById('navigation');
+        window.onscroll = function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            scrollTop > 160 ? navigation.classList.add("navigation-scrolled")
+                : navigation.classList.remove("navigation-scrolled");
+        }
+    }
+
+    window.sr = ScrollReveal({
+        reset: false, // 不重复动画
+        easing: "ease"
+    });
+    var feature = document.getElementById('feature');
+    sr.reveal('li', {container: feature, easing: 'ease-in-out', scale: 1, delay: 1000,}, 50);
+    sr.reveal('.block h2', {
+        duration: 1000,
+        scale: 1,
+        origin: "top", distance: "20px"
+    });
+
+    sr.reveal('.content h4', {
+        duration: 1000,
+        delay: 500,
+        scale: 1,
+        origin: "top", distance: "20px"
+    });
+
+    sr.reveal('.content p', {
+        duration: 1000,
+        delay: 700,
+        scale: 1,
+        origin: "top", distance: "30px"
+    });
+
+    sr.reveal('.pic-prepaid1', {
+        delay: 500,
+        duration: 500,
+        scale:1
+    });
+    sr.reveal('.pic-prepaid2', {duration: 1000, scale: 1});
+
+    sr.reveal('.pic-promotion-bg', {duration: 1000});
+    sr.reveal('.pic-promotion-mac', {duration: 1000});
+    sr.reveal('.pic-promotion-ticket1', {duration: 500, delay: 500, origin: "right", distance: '20px', scale: 1});
+    sr.reveal('.pic-promotion-ticket2', {duration: 500, delay: 500, origin: "left", distance: '20px', scale: 1});
+    //    sr.reveal('.wide-screen', {duration: 1000, scale:.9});
+    //    sr.reveal('.wechat-app', {duration: 1000, scale:.9});
+    sr.reveal('.pic-mobile-bg', {duration: 1000});
+    sr.reveal('.pic-mobile', {duration: 500, origin: "bottom", distance: "64px",easing:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"});
+    sr.reveal('.pic-wechat1', {
+        duration: 500,
+        origin: "bottom",
+        distance: "150px",
+        scale:1,
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+    });
+    sr.reveal('.pic-wechat2', {
+        duration: 500,
+        delay: 200,
+        origin: "bottom",
+        distance: "150px",
+        scale: 1,
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+    });
+     sr.reveal('.pic-marketing', {duration: 1000});
+
+
+</script>
 </html>

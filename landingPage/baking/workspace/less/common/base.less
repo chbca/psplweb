@@ -26,10 +26,14 @@ h4{
 }
 a{
   text-decoration: none;
+  cursor: pointer;
 }
 ul,li{
   list-style: none;
 }
+
+
+
 
 .container {
   width: 1100px;
@@ -39,12 +43,20 @@ ul,li{
   width: 946px;
 }
 .btn{
+  cursor: pointer;
   display: inline-block;
   text-align: center;
   color:@whiteColor;
   background: @primaryColor;
   text-shadow: 0px 3px 5px rgba(190, 57, 1, 0.51);
 }
+
+.btn:hover,
+.btn:active {
+  background: #ff7c44;
+  outline: none;
+}
+
 .icon{
   display: inline-block;
   vertical-align: middle;

@@ -23,7 +23,7 @@ gulp.task('less', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
+            browsers: ['last 3 versions','not ie <= 8'],
             cascade: false
         }))
         .pipe(sourcemaps.write())
