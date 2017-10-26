@@ -24,8 +24,8 @@ gulp.task('clean', function () {
 gulp.task('usemin', function () {
     return gulp.src('workspace/*.html')
         .pipe(usemin({
-            css: [rev()],
-            js: [uglify(), rev()],
+            css: [rev],
+            js: [uglify, rev],
         }))
         .pipe(gulp.dest('dist/'));
 });
