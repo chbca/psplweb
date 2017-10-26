@@ -292,3 +292,4 @@ __pycache__/
 *.idea
 landingPage/baking/node_modules/
 landingPage/baking/css/
+bin
