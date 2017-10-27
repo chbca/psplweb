@@ -1,0 +1,89 @@
+.block {
+  margin-bottom: 160px;
+  .title {
+    position: relative;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 70px;
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100px;
+      bottom: -30px;
+      left: 50%;
+      margin-left: -50px;
+      margin-bottom: 10px;
+      background: #999;
+    }
+  }
+  .subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.flow {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  li {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 198px;
+    padding: 20px 0;
+    border-radius: 10px;
+    border: 1px solid @borderColor;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgba(0,0,0,.01);
+    }
+    .action {
+      font-size: 24px;
+      color: @primaryFontColor;
+    }
+    &.single {
+      padding-top: 30px;
+    }
+  }
+  li + li:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 14px;
+    height: 20px;
+    top: 50%;
+    left: -23px;
+    margin-top: -10px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAMAAACK2/weAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAjgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8jgf8AAAAYsW9hAAAAJHRSTlMAUQElcEZQaS+EFQeNBhuBN2dahRMPgAODCnUcWzpZd4dtJxCh+v1XAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFlJREFUGNM9xEUSgEAQBLBlcXd3+P8fqZEmhxjHGmM45npI+AESYYREnCCWZrkmihKJqkai8ZFoO0T6wWpknGaNLSsiW4XIfiCynojM16gR2/Yaux/E3j/yAaMWBgUTmk7TAAAAAElFTkSuQmCC") no-repeat;
+  }
+}
+
+.flow-irregular {
+  li {
+    width: auto;
+    padding: 20px 15px 10px;
+  }
+}
+
+.jump {
+  font-size: 18px;
+  text-align: center;
+  a {
+    color: #2b81ec;
+  }
+}
+
+.icon-jump {
+  width: 8px;
+  height: 14px;
+  vertical-align: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAOAgMAAABvOLUFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAAArgewAAAD+J3uXAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWSURBVAjXYwhgYAAiVjBiQOaA2UhMADclAp/bFD/fAAAAAElFTkSuQmCC") no-repeat;
+
+}

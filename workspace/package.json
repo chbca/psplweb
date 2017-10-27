@@ -1,11 +1,11 @@
 {
-  "name": "landing.coolskull.cn",
-  "version": "0.0.3",
+  "name": "baking",
+  "version": "0.0.1",
   "dependencies": {
     "@fancyapps/fancybox": "^3.1.25",
     "jquery": "^2.1.4",
-    "scrollreveal": "^3.3.6",
-    "swiper": "^4.0.2"
+    "lightbox2": "^2.9.0",
+    "scrollreveal": "^3.3.6"
   },
   "devDependencies": {
     "del": "^3.0.0",

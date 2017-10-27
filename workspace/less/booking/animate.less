@@ -1,0 +1,62 @@
+// svg 动画
+.shape {
+  fill: transparent;
+  stroke-width: 2px;
+  //stroke: #fff;
+  stroke: rgba(255, 255, 255, 0);
+  //stroke-dasharray: 0 1700;
+  //stroke-dashoffset: 1700;
+  stroke-dasharray: 400 400;
+  stroke-dashoffset: 100;
+}
+
+.svg-border-animation.active .shape {
+  animation: draw 0.5s 0.1s linear forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 400 400;
+    stroke-dashoffset: 100;
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 2px;
+  }
+  100% {
+    stroke-dasharray: 1000 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #fff;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+.fadeInLeft {
+  //-webkit-animation-name: fadeInLeft;
+  //animation-name: fadeInLeft
+
+  animation: fadeInLeft .5s ;
+}
+
+.swiper-slide .text{
+  overflow: hidden;
+  .red{
+    color:red;
+  }
+  &.fadeInLeft{
+    overflow: auto;
+  }
+}
