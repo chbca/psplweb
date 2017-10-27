@@ -56,6 +56,13 @@ gulp.task('copy', function () {
         }
     ).pipe(gulp.dest('dist'));
 });
+gulp.task('copyjs', function () {
+    return gulp.src(
+        ['workspace/js/common/*'], {
+            base: 'workspace/js'   //如果设置为 base: 'js' 将只会复制 js目录下文件, 其他文件会忽略
+        }
+    ).pipe(gulp.dest('dist/js'));
+});
 
 gulp.task('sprite-baking', function () {
     // Generate our spritesheet
@@ -107,7 +114,7 @@ gulp.task('sprite-booking', function () {
 });
 gulp.task('imagemin', function () {
     return gulp.src('workspace/images/**')
-        .pipe(imagemin([imageminPngquant({quality: 40, speed: 1})]))
+        .pipe(imagemin([imageminPngquant({quality: 60, speed: 1})]))
         .pipe(gulp.dest('dist/images'));
 });
 gulp.task('dist-less', function () {
@@ -122,6 +129,6 @@ gulp.task('dist-less', function () {
 
 
 gulp.task('default', sequence('clean',['sprite-baking', 'sprite-booking'] , [ 'less','watch']));
-gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking'], 'imagemin', 'dist-less', 'usemin'));
+gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking'],'copyjs', 'imagemin', 'dist-less', 'usemin'));
 
 
