@@ -80,17 +80,21 @@
                 <div class="action">分享好友</div>
             </li>
         </ul>
-        <div class="swiper-container swiper-customer" id="swiper_customer" style="background: url(images/booking/banner.png)" >
+        <div class="swiper-container swiper-customer" id="swiper_customer">
+            <div class="parallax-bg"
+                 style="background-image:url(images/booking/customer_bg.png)"
+                 data-swiper-parallax="-23%">
+            </div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-swiper-parallax="-23%" data-swiper-parallax-duration="3000">
-                    <div class="phone-view" data-swiper-parallax="-200" data-swiper-parallax-duration="0.5">
+                <div class="swiper-slide">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/customer1.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-500">
                         <svg viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text" data-swiper-parallax="-100" data-swiper-parallax-duration="0.5">
+                        <div class="text" data-swiper-parallax="-200">
                             全新体验，无需下载APP<br/>
                             微信内快速打开小程序<br/>
                             <span class="text-left">（扫描二维码、发现小程序）</span>
@@ -99,14 +103,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view ani">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/customer2.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text ani">
+                        <div class="text" data-swiper-parallax="-300">
                             轻松预约，无需到店等待<br/>
                             通过小程序查询技师/教师上班时间进行预约<br/>
                             直接到店享受专属VIP服务
@@ -115,14 +119,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view ani">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/customer3.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text ani">
+                        <div class="text" data-swiper-parallax="-300">
                             支付即会员<br/>
                             立刻享受店铺优惠<br/>
                             省去店里繁锁办卡步骤
@@ -131,14 +135,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view ani">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/customer4.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text ani">
+                        <div class="text" data-swiper-parallax="-300">
                             会员中心<br/>
                             实时查询预约记录、消费历史、积分余额<br/>
                             不用找小票翻短信打电话了，也不会忘记消费
@@ -147,14 +151,15 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view ani">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/customer5.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="success"></div>
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text text-2row">
+                        <div class="text text-2row" data-swiper-parallax="-300">
                             一键分享好友<br/>
                             推荐你信赖的大师
                         </div>
@@ -163,11 +168,11 @@
                 </div>
             </div>
             <!-- 如果需要分页器 -->
-            <div class="swiper-pagination swiper-pagination1"></div>
+            <div class="swiper-pagination"></div>
 
             <!-- 如果需要导航按钮 -->
-            <div class="swiper-button-prev swiper-button-prev1"></div>
-            <div class="swiper-button-next swiper-button-next1"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
         </div>
     </div>
@@ -204,16 +209,20 @@
             </li>
         </ul>
         <div class="swiper-container swiper-store" id="swiper_store">
+            <div class="parallax-bg"
+                 style="background-image:url(images/booking/store_bg.png)"
+                 data-swiper-parallax="-23%">
+            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="phone-view">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/store1.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg class="svg" viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705" style="stroke:#fff;fill:none"></rect>
                         </svg>
-                        <div class="text">
+                        <div class="text" data-swiper-parallax="-300">
                             引入微信流量，零成本推广<br/>
                             周边顾客打开微信小程序自动定位附近<br/>
                             商家小程序
@@ -222,14 +231,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view">
+                    <div class="phone-view" data-swiper-parallax="-100">
                         <img src="images/booking/store2.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg class="svg" viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text">
+                        <div class="text" data-swiper-parallax="-300">
                             快速发展会员，支付即会员<br/>
                             顾客支付成功自动关注公众号<br/>
                             一键激活会员卡
@@ -238,14 +247,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view">
-                        <img src="images/booking/customer3.png" alt="">
+                    <div class="phone-view" data-swiper-parallax="-100">
+                        <img src="images/booking/store3.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg class="svg" viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text">
+                        <div class="text" data-swiper-parallax="-300">
                             线上线下无缝对接<br/>
                             收银系统里的商品和服务项目<br/>
                             直接同步小程序
@@ -254,14 +263,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view">
-                        <img src="images/booking/customer4.png" alt="">
+                    <div class="phone-view" data-swiper-parallax="-100">
+                        <img src="images/booking/store4.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg class="svg" viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text">
+                        <div class="text" data-swiper-parallax="-300">
                             高效管理员工线上排版，合理安排技师/教师<br/>
                             工作时间，提高员工工作效率；客户预约成功<br/>
                             推送短信到技师/教师，提前做好准备工作
@@ -270,14 +279,14 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="phone-view">
-                        <img src="images/booking/customer5.png" alt="">
+                    <div class="phone-view" data-swiper-parallax="-100">
+                        <img src="images/booking/store5.png" alt="">
                     </div>
-                    <div class="info svg-border-animation">
+                    <div class="info svg-border-animation" data-swiper-parallax="-200">
                         <svg class="svg" viewBox="0 0 705 145" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="145" width="705"></rect>
                         </svg>
-                        <div class="text hover-text">
+                        <div class="text text-4row" data-swiper-parallax="-300">
                             会员精准营销，技师/教师可直接在app上<br/>
                             查看会员消费记录，积分余额，主动筛选<br/>
                             潜水活跃会员，推送活动短信优惠券，提<br/>
@@ -400,62 +409,62 @@
 <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
 <!-- endbuild -->
 <script>
-        var $infos1 = $("#swiper_customer .swiper-slide .info");
-        var $infos2 = $("#swiper_store .swiper-slide .info");
-        $("#swiper_customer .swiper-slide:eq(0) .info").addClass('active')
-        $("#swiper_store .swiper-slide:eq(0) .info").addClass('active')
-        var mySwiper1 = new Swiper('#swiper_customer', {
-            direction: 'horizontal',
+    var $infos1 = $("#swiper_customer .swiper-slide .info");
+    var $infos2 = $("#swiper_store .swiper-slide .info");
+    $("#swiper_customer .swiper-slide:eq(0) .info").addClass('active')
+    $("#swiper_store .swiper-slide:eq(0) .info").addClass('active')
+    var mySwiper1 = new Swiper('#swiper_customer', {
+        direction: 'horizontal',
 //            autoplay: 5000,
-            parallax: true,
-            pagination: '.swiper-pagination1',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next1',
-            prevButton: '.swiper-button-prev1',
-            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+        parallax: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
 //                swiperAnimateCache(swiper); //隐藏动画元素
 //                swiperAnimate(swiper); //初始化完成开始动画
-            },
-            onSlideChangeEnd: function (swiper) {
+        },
+        onSlideChangeStart: function (swiper) {
 //                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-                $infos1.each(function (index) {
-                    if(index === swiper.activeIndex){
-                        $(this).addClass('active')
-                        $(this).find('.text').addClass('fadeInLeft')
-                        $(this).find('.text').addClass('red')
-                        console.log($(this).find('.text'));
-                    }else{
-                        $(this).removeClass('active')
-                        $(this).find('.text').removeClass('fadeInLeft')
-                        $(this).find('.text').removeClass('red')
-
-
-                    }
-                })
-
+            console.log(swiper.activeIndex);
+            $infos1.each(function (index) {
+                if (index === swiper.activeIndex) {
+                    $(this).addClass('active')
+                    $(this).find('.text').addClass('fadeInLeft')
+                } else {
+                    $(this).removeClass('active')
+                    $(this).find('.text').removeClass('fadeInLeft')
+                }
+            })
+            if(swiper.activeIndex===4){
+                $(".success").addClass('show');
+            }else{
+                $(".success").removeClass('show');
             }
-        })
-//        var mySwiper2 = new Swiper('#swiper_store', {
-//            direction: 'horizontal',
-//            autoplay: 5000,
-//            parallax: true,
-//            pagination: '.swiper-pagination2',
-//            paginationClickable: true,
-//            nextButton: '.swiper-button-next2',
-//            prevButton: '.swiper-button-prev2',
-//            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
-////                swiperAnimateCache(swiper); //隐藏动画元素
-////                swiperAnimate(swiper); //初始化完成开始动画
-//            },
-//            onSlideChangeEnd: function (swiper) {
-////                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-////                $infos2.each(function (index) {
-////                    index === swiper.activeIndex? $(this).addClass('active'): $(this).removeClass('active');
-////                })
-//            }
-//        });
 
-
+        }
+    })
+    var mySwiper2 = new Swiper('#swiper_store', {
+        direction: 'horizontal',
+        autoplay: 5000,
+        parallax: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        onSlideChangeStart: function (swiper) {
+            $infos2.each(function (index) {
+                if (index === swiper.activeIndex) {
+                    $(this).addClass('active')
+                    $(this).find('.text').addClass('fadeInLeft')
+                } else {
+                    $(this).removeClass('active')
+                    $(this).find('.text').removeClass('fadeInLeft')
+                }
+            })
+        }
+    });
 
 
 </script>

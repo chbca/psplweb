@@ -5,7 +5,7 @@
     "@fancyapps/fancybox": "^3.1.25",
     "jquery": "^2.1.4",
     "scrollreveal": "^3.3.6",
-    "swiper": "^4.0.2"
+    "swiper": "^3.3.1"
   },
   "devDependencies": {
     "del": "^3.0.0",

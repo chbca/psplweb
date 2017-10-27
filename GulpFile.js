@@ -114,7 +114,7 @@ gulp.task('sprite-booking', function () {
 });
 gulp.task('imagemin', function () {
     return gulp.src('workspace/images/**')
-        .pipe(imagemin([imageminPngquant({quality: 60, speed: 1})]))
+        .pipe(imagemin([imageminPngquant({quality: 80, speed: 1})]))
         .pipe(gulp.dest('dist/images'));
 });
 gulp.task('dist-less', function () {

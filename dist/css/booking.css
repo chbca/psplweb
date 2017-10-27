@@ -284,6 +284,9 @@ li {
 .swiper-slide .text-2row {
   margin-top: 15px;
 }
+.swiper-slide .text-4row {
+  margin-top: -10px;
+}
 .shape {
   fill: transparent;
   stroke-width: 2px;
@@ -326,9 +329,8 @@ li {
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -340,9 +342,8 @@ li {
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -352,8 +353,8 @@ li {
   }
 }
 .fadeInLeft {
-  -webkit-animation: fadeInLeft .5s ;
-  animation: fadeInLeft .5s ;
+  -webkit-animation: fadeInLeft .6s .1s;
+  animation: fadeInLeft .6s .1s;
 }
 .swiper-slide .text {
   overflow: hidden;
@@ -363,4 +364,35 @@ li {
 }
 .swiper-slide .text.fadeInLeft {
   overflow: auto;
+}
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.success {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 79px 0px rgba(0, 91, 194, 0.5);
+  box-shadow: 0px 3px 79px 0px rgba(0, 91, 194, 0.5);
+  left: 138px;
+  top: 135px;
+  width: 280px;
+  height: 280px;
+  -webkit-transform: scale(0.5, 1);
+  -ms-transform: scale(0.5, 1);
+  transform: scale(0.5, 1);
+}
+.success.show {
+  -webkit-transform: scale(1.01, 1);
+  -ms-transform: scale(1.01, 1);
+  transform: scale(1.01, 1);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
