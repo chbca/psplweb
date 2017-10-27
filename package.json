@@ -1,6 +1,6 @@
 {
   "name": "landing.coolskull.cn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "@fancyapps/fancybox": "^3.1.25",
     "jquery": "^2.1.4",
