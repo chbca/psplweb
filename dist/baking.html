@@ -270,7 +270,7 @@
 <script src="js/baking-ce29a72b54.js"></script>
 <script>
     $("#btn_video_play").click(function () {
-
+        var $video1 = $('#video').get(0);
         $.fancybox.open({
             src: '#video_container',
             type: 'inline',
@@ -280,10 +280,11 @@
                 fullScreen: false,
                 toolbar: false,
                 afterShow: function () {
-                    $('#video').get(0).play();
+                    $video1.play();
                 },
                 afterClose: function () {
-                    $('#video').get(0).pause();
+                    $video1.pause();
+                    $video1.currentTime = 0;
                 }
             }
         });
