@@ -30,7 +30,7 @@ sr.reveal('.content h4', {
 
 sr.reveal('.content p', {
     duration: 1000,
-    delay: 600,
+    delay: 500,
     scale: 1,
     origin: "bottom", distance: "30px"
 });
