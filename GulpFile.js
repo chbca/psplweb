@@ -112,6 +112,30 @@ gulp.task('sprite-booking', function () {
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream);
 });
+gulp.task('sprite-beauty', function () {
+    // Generate our spritesheet
+    var spriteData = gulp.src('workspace/sprites/beautyIcons/*.png').pipe(spritesmith({
+        imgName: 'beauty_icons.png',
+        cssName: 'icons.less',
+        padding: 6,
+        algorithm: 'binary-tree',
+        cssTemplate: "handelbarstr2.less",
+    }));
+
+    // Pipe image stream through image optimizer and onto disk
+    var imgStream = spriteData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin`
+        .pipe(buffer())
+        .pipe(gulp.dest('workspace/images/'));
+
+    // Pipe CSS stream through CSS optimizer and onto disk
+    var cssStream = spriteData.css
+        .pipe(csso())
+        .pipe(gulp.dest('workspace/less/beauty'))
+
+    // Return a merged stream to handle both `end` events
+    return merge(imgStream, cssStream);
+});
 gulp.task('imagemin', function () {
     return gulp.src('workspace/images/**')
         .pipe(imagemin([imageminPngquant({quality: 80, speed: 1})]))
@@ -128,7 +152,7 @@ gulp.task('dist-less', function () {
 });
 
 
-gulp.task('default', sequence('clean',['sprite-baking', 'sprite-booking'] , [ 'less','watch']));
-gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking'],'copyjs', 'imagemin', 'dist-less', 'usemin'));
+gulp.task('default', sequence('clean',['sprite-baking', 'sprite-booking','sprite-beauty'] , [ 'less','watch']));
+gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking', 'sprite-beauty'],'copyjs', 'imagemin', 'dist-less', 'usemin'));
 
 

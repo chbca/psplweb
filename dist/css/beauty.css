@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font: 14px/1.5 "Microsoft YaHei", Tahoma, Arial, "Helvetica Neue", "Hiragino Sans GB", Simsun, sans-self !important;
+  color: #666;
+  background: #fff;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.btn:hover,
+.btn:active {
+  background: #ff7c44;
+  outline: none;
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-tong1:before {
+  background-image: url(../images/beauty_icons.png);
+  background-position: 0 -74px;
+  width: 66px;
+  height: 69px;
+}
+.icon-tong2:before,
+.icon-tong3:before,
+.icon-tong4:before {
+  background-image: url(../images/beauty_icons.png);
+  background-position: 0 0;
+  width: 68px;
+  height: 68px;
+}
+.icon-tong3:before,
+.icon-tong4:before {
+  background-position: -74px 0;
+  width: 66px;
+  height: 65px;
+}
+.icon-tong4:before {
+  background-position: -74px -71px;
+}
+.banner {
+  background: #5887ff url(../images/beauty/banner_bg.png) no-repeat center;
+  background-size: cover;
+  text-align: right;
+}
+.banner:before,
+.banner:after {
+  content: " ";
+  display: table;
+}
+.banner:after {
+  clear: both;
+}
+.banner .wrapper {
+  width: 900px;
+}
+.banner .pic {
+  padding: 24px 0 ;
+  margin-left: -30px;
+}
+.banner .pic img {
+  width: 698px;
+  height: 509px;
+}
+.banner .content {
+  width: auto;
+  padding: 130px 0;
+}
+.banner .title {
+  color: #fff;
+  line-height: 1.2;
+}
+.banner .subtitle {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 15px;
+  font-family: '﻿PingFangSC-Ultralight';
+  letter-spacing: 7.2px;
+}
+.banner .btn {
+  width: 239px;
+  height: 56px;
+  margin-top: 56px;
+  font-size: 24px;
+  line-height: 56px;
+  color: #2851ba;
+  background-color: #00ffff;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 3px 24px 0px rgba(3, 30, 98, 0.34);
+  box-shadow: 0px 3px 24px 0px rgba(3, 30, 98, 0.34);
+}
+.banner .pic {
+  width: 400px;
+}
+.banner .content {
+  width: 450px;
+}
+.center-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.center-block .title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.block {
+  padding: 50px 0;
+}
+.block:before,
+.block:after {
+  content: " ";
+  display: table;
+}
+.block:after {
+  clear: both;
+}
+.block .block-title {
+  font-family: '﻿PingFangSC-Ultralight';
+  text-align: center;
+  margin-top: 48px;
+}
+.block .block-title em {
+  position: relative;
+  font-weight: bold;
+  font-style: normal;
+  font-family: '﻿PingFangSC-Light';
+  padding: 0 20px;
+}
+.block .block-title em:before,
+.block .block-title em:after {
+  position: absolute;
+  content: '';
+}
+.block .block-title em:before {
+  left: 10px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #5887ff;
+  border-top: 1px solid #5887ff;
+}
+.block .block-title em:after {
+  right: 10px;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #5887ff;
+  border-bottom: 1px solid #5887ff;
+}
+.block .pic {
+  width: 440px;
+  padding-top: 50px;
+}
+.block .pic-left img {
+  margin-left: 10px;
+}
+.block .pic-right {
+  margin-left: -10px;
+}
+.block .desc {
+  width: 520px;
+}
+.block .desc .title {
+  color: #5887ff;
+  line-height: 1.2;
+  padding: 30px 10px;
+  background: url(../images/beauty/feature_title.png) no-repeat left bottom;
+}
+.block .desc ul {
+  list-style: disc outside none;
+  padding: 20px 0 30px 20px;
+}
+.block .desc li {
+  position: relative;
+  display: list-item;
+  font-size: 18px;
+  line-height: 28px;
+  color: #757575;
+}
+.block .desc li:before {
+  position: absolute;
+  content: '.';
+  left: -15px;
+  top: -5px;
+}
+.block .desc1 {
+  margin-left: 50px;
+}
+.white_bg {
+  background: #fff;
+}
+.blue_bg {
+  background: #E2F1FF;
+}
+.tong {
+  padding: 50px;
+  font-size: 18px;
+}
+.tong .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tong .row .col {
+  width: 50%;
+  position: relative;
+  text-align: center;
+  padding: 35px 35px 40px;
+}
+.tong .row:first-child .col:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  margin-left: -60px;
+  bottom: 0;
+  background: #EFEFEF;
+}
+.tong .row .col + .col:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 120px;
+  top: 50%;
+  margin-top: -60px;
+  left: 0;
+  background: #EFEFEF;
+}
+.icon-tong {
+  width: 70px;
+  height: 93px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.icon-tong:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 0;
+  right: 0;
+  bottom: 23px;
+  left: 0;
+  margin: auto;
+}
+.icon-tong:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: inline-block;
+  width: 71px;
+  height: 12px;
+  background: #F0F8FF;
+  border-radius: 50%;
+}
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes shadowSize {
+  0% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50px;
+    left: 10px;
+  }
+  100% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+  }
+}
+@keyframes shadowSize {
+  0% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50px;
+    left: 10px;
+  }
+  100% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+  }
+}
+.icon-tong.active::before {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation: jump 1.2s infinite ease-in-out;
+  animation: jump 1.2s infinite ease-in-out;
+}
+.icon-tong.active::after {
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: shadowSize 1.2s infinite ease-in-out;
+  animation: shadowSize 1.2s infinite ease-in-out;
+}
+.icon-tong2.active::before,
+.icon-tong2.active::after {
+  -webkit-animation-delay: .5s ;
+  animation-delay: .5s ;
+}
+.icon-tong3.active::before,
+.icon-tong3.active::after {
+  -webkit-animation-delay: .2s ;
+  animation-delay: .2s ;
+}
+.icon-tong2.active::before,
+.icon-tong2.active::after {
+  -webkit-animation-delay: .9s ;
+  animation-delay: .9s ;
+}

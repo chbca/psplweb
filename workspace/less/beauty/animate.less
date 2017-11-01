@@ -1,0 +1,77 @@
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shadowSize {
+  0% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+
+  }
+  50% {
+    opacity: 0.5;
+    width: 50px;
+    left: 10px;
+  }
+  100% {
+    opacity: 1;
+    width: 71px;
+    left: 0;
+  }
+}
+
+.icon-tong.active {
+  &::before {
+    transform-origin: center bottom;
+    animation: jump 1.2s infinite ease-in-out;
+  }
+  &::after {
+    transform-origin: center center;
+    animation: shadowSize 1.2s infinite ease-in-out;
+  }
+
+  //.col:hover &::before,
+  //.col:hover &::after {
+  //  animation: none;
+  //}
+}
+
+.icon-tong2.active{
+  &::before , &::after{
+    animation-delay:.5s ;
+  }
+}
+
+.icon-tong3.active{
+  &::before , &::after{
+    animation-delay:.2s ;
+  }
+}
+.icon-tong2.active{
+  &::before , &::after{
+    animation-delay:.9s ;
+  }
+}
+
+
+//.col:hover {
+//  .icon-tong {
+//    &::before {
+//      transform-origin: center bottom;
+//      animation: jump .7s infinite ease-in-out;
+//    }
+//    &::after {
+//      transform-origin: center center;
+//      animation: shadowSize .7s infinite ease-in-out;
+//    }
+//  }
+//}

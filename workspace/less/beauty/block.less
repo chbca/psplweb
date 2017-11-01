@@ -1,0 +1,96 @@
+@import "variables";
+
+.center-block {
+  display: flex;
+  align-items: center;
+  .title {
+    flex: 1;
+  }
+}
+.block {
+  .clearfix();
+  padding: 50px 0;
+  .block-title {
+    font-family: '﻿PingFangSC-Ultralight';
+    text-align: center;
+    margin-top: 48px;
+    em {
+      position: relative;
+      font-weight: bold;
+      font-style: normal;
+      font-family: '﻿PingFangSC-Light';
+      padding:0 20px;
+      &:before , &:after {
+        position: absolute;
+        content:'';
+      }
+      &:before {
+        left: 10px;
+        top:0px;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid @primaryColor;
+        border-top: 1px solid @primaryColor;
+
+      }
+      &:after {
+        right: 10px;
+        bottom: 0px;
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid @primaryColor;
+        border-bottom: 1px solid @primaryColor;
+      }
+    }
+  }
+
+  .pic {
+    width: 960-520px;
+    padding-top: 50px;
+
+  }
+  .pic-left{
+    img {
+      margin-left: 10px;
+    }
+  }
+  .pic-right{
+    margin-left:-10px;
+  }
+  .desc {
+    width: 520px;
+    .title{
+      color:@primaryColor;
+      line-height: 1.2;
+      padding:30px 10px;
+      background: url(../images/beauty/feature_title.png) no-repeat left bottom;
+    }
+    ul{
+      list-style: disc outside none;
+      padding:20px 0 30px 20px;
+    }
+    li{
+      //list-style: disc outside none;
+      position: relative;
+      display:list-item;
+      font-size: 18px;
+      line-height: 28px;
+      color: #757575;
+      &:before{
+        position: absolute;
+        content:'.';
+        left: -15px;
+        top: -5px;
+      }
+    }
+  }
+  .desc1{
+    margin-left: 50px;
+  }
+}
+.white_bg{
+  background: #fff;
+}
+.blue_bg{
+  background:#E2F1FF;
+}

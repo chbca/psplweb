@@ -1,0 +1,15 @@
+@primaryColor:#5887ff;
+@borderColor:#3a88ff;
+@primaryFontColor:#1e7dff;
+@baseBgColor:#fff;
+@baseFontColor:#666;
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
