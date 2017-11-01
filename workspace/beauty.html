@@ -44,9 +44,18 @@
         </div>
     </div>
     <div class="banner">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
         <div class="wrapper center-block">
-            <div class="pic">
-                <img src="images/beauty/banner_pic.png" alt="">
+
+            <div class="banner-pics ani">
+                <img class="banner-pic1" src="images/beauty/banner_pic1.png" alt="">
+                <img class="banner-pic2" src="images/beauty/banner_pic2.png" alt="">
+                <img class="banner-pic3" src="images/beauty/banner_pic3.png" alt="">
+                <img class="banner-pic4" src="images/beauty/banner_pic4.png" alt="">
+                <img class="banner-pic5" src="images/beauty/banner_pic5.png" alt="">
+                <img class="banner-pic6" src="images/beauty/banner_pic6.png" alt="">
+                <img class="banner-pic7" src="images/beauty/banner_pic7.png" alt="">
             </div>
             <div class="content">
                 <h1 class="title">银豹美业<br/>预约小程序</h1>
@@ -296,20 +305,17 @@
 <script type="text/javascript" src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
 <!-- endbuild -->
 <script>
-    $(function () {
-        var $tong = $('.tong');
-        var $tongIcon = $tong.find(".icon-tong");
-        $(window).scroll(fn);
-        fn();
-
-        function fn () {
-            if (window.innerHeight > $tong[0].getBoundingClientRect().top) {
-                $tongIcon.addClass('active');
-            } else {
-                $tongIcon.removeClass('active');
-            }
-        }
+    window.sr = ScrollReveal({
+        reset: true, // 不重复动画
     });
+    var banner_pic = document.getElementById('banner_pic');
+    sr.reveal('.pic', {
+        duration: 1000,
+        scale: 1,
+        origin: "bottom", distance: "20px"
+    });
+
+
 </script>
 </body>
 

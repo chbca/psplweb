@@ -29,7 +29,7 @@
   }
 }
 
-.icon-tong.active {
+.icon-tong {
   &::before {
     transform-origin: center bottom;
     animation: jump 1.2s infinite ease-in-out;
@@ -45,23 +45,23 @@
   //}
 }
 
-.icon-tong2.active{
-  &::before , &::after{
-    animation-delay:.5s ;
+.icon-tong2 {
+  &::before, &::after {
+    animation-delay: .9s;
   }
 }
 
-.icon-tong3.active{
-  &::before , &::after{
-    animation-delay:.2s ;
-  }
-}
-.icon-tong2.active{
-  &::before , &::after{
-    animation-delay:.9s ;
+.icon-tong3 {
+  &::before, &::after {
+    animation-delay: .2s;
   }
 }
 
+//.icon-tong4{
+//  &::before , &::after{
+//    animation-delay:.9s ;
+//  }
+//}
 
 //.col:hover {
 //  .icon-tong {
@@ -75,3 +75,121 @@
 //    }
 //  }
 //}
+
+
+
+
+@keyframes card1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476px, 70px, 0) scale(0.681);
+  }
+
+  //to {
+  //  opacity: 1;
+  //  transform: none
+  //}
+}
+@keyframes card2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476-108px, 70-40px, 0) scale(0.836);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card3 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476-177px, 70-52px, 0) scale(0.861);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card4 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476-255px, 70-59px, 0) scale(0.930);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card5 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476-331px, 70-64px, 0) scale(0.951);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card6 {
+  0% {
+    opacity: 0;
+    transform: translate3d(476-400px, 70-67px, 0) scale(0.978);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes card7 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.banner {
+  .ani{
+    img{
+      transform-origin: top center;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+    }
+    .banner-pic1 {
+      animation-name: card1;
+    }
+    .banner-pic2 {
+      animation-name: card2;
+    }
+
+    .banner-pic3 {
+      animation-name: card3;
+    }
+
+    .banner-pic4 {
+      animation-name: card4;
+    }
+    .banner-pic5 {
+      animation-name: card5;
+    }
+    .banner-pic6 {
+      animation-name: card6;
+    }
+    .banner-pic7 {
+      animation-name: card7;
+    }
+  }
+
+}
+
+

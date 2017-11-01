@@ -1,23 +1,70 @@
 @import "variables";
 
 .banner {
-  background: #5887ff url(../images/beauty/banner_bg.png) no-repeat center;
+  position: relative;
+  background: #5887ff;
   background-size: cover;
   text-align: right;
   .clearfix();
-  .wrapper{
+  .wrapper {
     width: 900px;
   }
-  .pic {
-    padding:24px 0 ;
-    margin-left:-30px;
+  .center-block {
+    align-items: flex-start;
+  }
+  .banner-pics {
+    position: relative;
+    width: 400px;
+    margin: 54px 0 54px -6px;
     img {
-      width: 698px;
-      height: 509px;
+      position: absolute;
+
+    }
+    .banner-pic1 {
+      top: 0;
+      left: 0;
+      z-index: 7;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51);
+    }
+    .banner-pic2 {
+      top: 40px;
+      left: 108px;
+      z-index: 6;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.75);
+    }
+    .banner-pic3 {
+      top: 52px;
+      left: 177px;
+      z-index: 5;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.55);
+    }
+    .banner-pic4 {
+      top: 59px;
+      left: 255px;
+      z-index: 4;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.35);
+    }
+    .banner-pic5 {
+      top: 64px;
+      left: 331px;
+      z-index: 3;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.15);
+    }
+    .banner-pic6 {
+      top: 67px;
+      left: 400px;
+      z-index: 2;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.1);
+    }
+    .banner-pic7 {
+      top: 70px;
+      left: 476px;
+      z-index: 1;
+      box-shadow: 1.9px 2.3px 32px 0px rgba(0, 36, 127, 0.51*0.05);
     }
   }
   .content {
-    width: auto;
+    width: 450px;
     padding: 130px 0;
   }
   .title {
@@ -45,9 +92,22 @@
   .pic {
     width: 400px;
   }
+  .wave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .wave1 {
+    background: url(../images/beauty/wave1.png) bottom no-repeat;
 
-  .content {
-    width: 450px;
+    background-size: contain;
+  }
+  .wave2 {
+    background: url(../images/beauty/wave2.png) bottom no-repeat;
+
+    background-size: contain;
   }
 
 }
