@@ -63,6 +63,13 @@ gulp.task('copyjs', function () {
         }
     ).pipe(gulp.dest('dist/js'));
 });
+gulp.task('copyimages', function () {
+    return gulp.src(
+        ['workspace/images/beauty/wave1.png', 'workspace/images/beauty/wave2.png'], {
+            base: 'workspace'   //如果设置为 base: 'js' 将只会复制 js目录下文件, 其他文件会忽略
+        }
+    ).pipe(gulp.dest('dist'));
+});
 
 gulp.task('sprite-baking', function () {
     // Generate our spritesheet
@@ -153,6 +160,6 @@ gulp.task('dist-less', function () {
 
 
 gulp.task('default', sequence('clean',['sprite-baking', 'sprite-booking','sprite-beauty'] , [ 'less','watch']));
-gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking', 'sprite-beauty'],'copyjs', 'imagemin', 'dist-less', 'usemin'));
+gulp.task('build', sequence('clean', ['sprite-baking', 'sprite-booking', 'sprite-beauty'],'copyjs', 'imagemin','copyimages', 'dist-less', 'usemin'));
 
 
