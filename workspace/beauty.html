@@ -44,11 +44,11 @@
         </div>
     </div>
     <div class="banner">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
+        <div class="wave wave2 ani"></div>
+        <div class="wave wave1 ani"></div>
         <div class="wrapper center-block">
 
-            <div class="banner-pics ani">
+            <div class="banner-pics">
                 <img class="banner-pic1" src="images/beauty/banner_pic1.png" alt="">
                 <img class="banner-pic2" src="images/beauty/banner_pic2.png" alt="">
                 <img class="banner-pic3" src="images/beauty/banner_pic3.png" alt="">
@@ -306,7 +306,7 @@
 <!-- endbuild -->
 <script>
     window.sr = ScrollReveal({
-        reset: true, // 不重复动画
+        reset: true // 不重复动画
     });
     var banner_pic = document.getElementById('banner_pic');
     sr.reveal('.pic', {
@@ -314,7 +314,9 @@
         scale: 1,
         origin: "bottom", distance: "20px"
     });
-
+    $(function () {
+        $(".banner-pics").addClass("ani");
+    });
 
 </script>
 </body>

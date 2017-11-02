@@ -4,6 +4,8 @@
   position: relative;
   background: #5887ff;
   background-size: cover;
+  width: 100%;
+  overflow: hidden;
   text-align: right;
   .clearfix();
   .wrapper {
@@ -88,6 +90,9 @@
     background-color: rgb(0, 255, 255);
     border-radius: 28px;
     box-shadow: 0px 3px 24px 0px rgba(3, 30, 98, 0.34);
+    &:hover{
+      background-color: #00fff2;
+    }
   }
   .pic {
     width: 400px;
@@ -95,9 +100,9 @@
   .wave {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -50px;
     bottom: 0;
-    left: 0;
+    left: -50px;
   }
   .wave1 {
     background: url(../images/beauty/wave1.png) bottom no-repeat;

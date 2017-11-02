@@ -138,7 +138,7 @@ gulp.task('sprite-beauty', function () {
 });
 gulp.task('imagemin', function () {
     return gulp.src('workspace/images/**')
-        .pipe(imagemin([imageminPngquant({quality: 80, speed: 1})]))
+        .pipe(imagemin([imageminPngquant({quality: 90, speed: 3})]))
         .pipe(gulp.dest('dist/images'));
 });
 gulp.task('dist-less', function () {

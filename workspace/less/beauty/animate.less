@@ -76,9 +76,6 @@
 //  }
 //}
 
-
-
-
 @keyframes card1 {
   0% {
     opacity: 0;
@@ -90,6 +87,7 @@
   //  transform: none
   //}
 }
+
 @keyframes card2 {
   0% {
     opacity: 0;
@@ -101,6 +99,7 @@
     transform: none;
   }
 }
+
 @keyframes card3 {
   0% {
     opacity: 0;
@@ -112,6 +111,7 @@
     transform: none;
   }
 }
+
 @keyframes card4 {
   0% {
     opacity: 0;
@@ -123,6 +123,7 @@
     transform: none;
   }
 }
+
 @keyframes card5 {
   0% {
     opacity: 0;
@@ -134,6 +135,7 @@
     transform: none;
   }
 }
+
 @keyframes card6 {
   0% {
     opacity: 0;
@@ -159,8 +161,8 @@
 }
 
 .banner {
-  .ani{
-    img{
+  .ani {
+    img {
       transform-origin: top center;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -192,4 +194,22 @@
 
 }
 
+@keyframes wave-ani {
+  0% {
+    transform: translate3d(50px, 0, 0);
+  }
+  50% {
+    transform: none;
+  }
+  100% {
+    transform: translate3d(50px, 0, 0);
+  }
+}
 
+.wave1.ani {
+  animation: wave-ani 2s infinite linear;
+}
+
+.wave2.ani {
+  animation: wave-ani 3s infinite linear;
+}
