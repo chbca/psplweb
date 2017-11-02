@@ -1,0 +1,115 @@
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 10;
+}
+.navigation-logo {
+  position: absolute;
+  width: 208px;
+  height: 80px;
+  background: url(https://www.pospal.cn/main/resource/image/common/header/navigation/logo.png) no-repeat;
+  z-index: 10;
+}
+.navigation-menu,
+.navigation-menu-main {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+}
+.navigation-menu {
+  border-bottom: 1px solid #d4d3cc;
+  min-width: 1200px;
+}
+.navigation-menu-main {
+  text-align: center;
+}
+.navigation-menu-main .link {
+  display: inline-block;
+  font-size: 18px;
+  color: #000;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+}
+.navigation-menu-main .link:hover {
+  color: #ff6727 !important;
+}
+.navigation-menu-uac {
+  position: absolute;
+  height: 80px;
+  line-height: 80px;
+  right: 20px;
+}
+.navigation-menu-uac .sign-in,
+.navigation-menu-uac .sign-up {
+  display: inline-block;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 2px;
+}
+.navigation-menu-uac .sign-in {
+  color: #ff6727;
+  width: 73px;
+  border: 1px solid #ff6727;
+  margin: 0 10px 0 0;
+}
+.navigation-menu-uac .sign-up {
+  color: #fff;
+  width: 120px;
+  border: 1px solid #ff6727;
+  background-color: #ff6727;
+  margin: 0 20px 0 0;
+}
+.navigation-menu-main-sub {
+  position: absolute;
+  width: 100%;
+  height: 420px !important;
+  background-color: #fff;
+  text-align: center;
+  top: 81px;
+  border-bottom: 1px solid #d4d3cc;
+  z-index: 10;
+  visibility: hidden;
+}
+.navigation-menu-main-sub .column {
+  width: 270px;
+  display: inline-block;
+  vertical-align: top;
+}
+.navigation-menu-main-sub .column::before {
+  position: absolute;
+  width: 1px;
+  height: 290px;
+  content: "";
+  background-color: #e0e0e0;
+  margin: 80px 0 0 -150px;
+}
+.navigation-menu-main-sub .column:nth-child(1)::before {
+  display: none;
+}
+.navigation-menu-main-sub .column .title {
+  font-size: 14px;
+  text-align: left;
+  margin: 30px 0 15px 60px;
+}
+.navigation-menu-main-sub .column .link {
+  display: block;
+  width: 100px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 0 0 60px;
+  margin: 0 0 0 40px;
+  background-repeat: no-repeat;
+}
+.navigation-menu-main-sub .column .link:hover {
+  color: #ff6727 !important;
+}
+.color-black {
+  color: #322e2f;
+}
