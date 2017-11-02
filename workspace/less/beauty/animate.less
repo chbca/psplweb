@@ -194,22 +194,36 @@
 
 }
 
-@keyframes wave-ani {
+@keyframes wave-ani1 {
   0% {
-    transform: translate3d(50px, 0, 0);
+    //transform: translate3d(100px, 0, 0);
+    background-position: 0 bottom;
   }
   50% {
-    transform: none;
+    //transform: none;
   }
   100% {
-    transform: translate3d(50px, 0, 0);
+    //transform: translate3d(100px, 0, 0);
+    background-position: 9999px bottom;
+  }
+}
+@keyframes wave-ani2 {
+  0% {
+    background-position: 50px bottom;
+  }
+  50% {
+    //transform: none;
+  }
+  100% {
+    //transform: translate3d(100px, 0, 0);
+    background-position: 9999px bottom;
   }
 }
 
 .wave1.ani {
-  animation: wave-ani 2s infinite linear;
+  animation: wave-ani1 8s infinite linear;
 }
 
 .wave2.ani {
-  animation: wave-ani 3s infinite linear;
+  animation: wave-ani1 8s infinite linear;
 }

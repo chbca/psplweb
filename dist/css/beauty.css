@@ -192,17 +192,15 @@ li {
 .banner .wave {
   position: absolute;
   top: 0;
-  right: -50px;
+  right: 0;
   bottom: 0;
-  left: -50px;
+  left: 0;
 }
 .banner .wave1 {
-  background: url(../images/beauty/wave1.png) bottom no-repeat;
-  background-size: contain;
+  background: url(../images/beauty/wave1.png) bottom repeat-x;
 }
 .banner .wave2 {
-  background: url(../images/beauty/wave2.png) bottom no-repeat;
-  background-size: contain;
+  background: url(../images/beauty/wave2.png) bottom repeat-x;
 }
 .center-block {
   display: -webkit-box;
@@ -651,39 +649,43 @@ li {
   -webkit-animation-name: card7;
   animation-name: card7;
 }
-@-webkit-keyframes wave-ani {
+@-webkit-keyframes wave-ani1 {
   0% {
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
-  }
-  50% {
-    -webkit-transform: none;
-    transform: none;
+    background-position: 0 bottom;
   }
   100% {
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
+    background-position: 9999px bottom;
   }
 }
-@keyframes wave-ani {
+@keyframes wave-ani1 {
   0% {
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
-  }
-  50% {
-    -webkit-transform: none;
-    transform: none;
+    background-position: 0 bottom;
   }
   100% {
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
+    background-position: 9999px bottom;
+  }
+}
+@-webkit-keyframes wave-ani2 {
+  0% {
+    background-position: 50px bottom;
+  }
+  100% {
+    background-position: 9999px bottom;
+  }
+}
+@keyframes wave-ani2 {
+  0% {
+    background-position: 50px bottom;
+  }
+  100% {
+    background-position: 9999px bottom;
   }
 }
 .wave1.ani {
-  -webkit-animation: wave-ani 2s infinite linear;
-  animation: wave-ani 2s infinite linear;
+  -webkit-animation: wave-ani1 8s infinite linear;
+  animation: wave-ani1 8s infinite linear;
 }
 .wave2.ani {
-  -webkit-animation: wave-ani 3s infinite linear;
-  animation: wave-ani 3s infinite linear;
+  -webkit-animation: wave-ani1 8s infinite linear;
+  animation: wave-ani1 8s infinite linear;
 }
