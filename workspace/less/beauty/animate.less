@@ -204,26 +204,27 @@
   }
   100% {
     //transform: translate3d(100px, 0, 0);
-    background-position: 9999px bottom;
+    background-position: 3339*10px bottom;
   }
 }
 @keyframes wave-ani2 {
   0% {
-    background-position: 50px bottom;
+    background-position: -50px bottom;
   }
   50% {
     //transform: none;
   }
   100% {
     //transform: translate3d(100px, 0, 0);
-    background-position: 9999px bottom;
+    background-position: 2574*10-50px bottom;
   }
 }
 
 .wave1.ani {
-  animation: wave-ani1 8s infinite linear;
+  animation: wave-ani1 50s infinite linear;
 }
 
 .wave2.ani {
-  animation: wave-ani1 8s infinite linear;
+  animation: wave-ani2 50*0.77s infinite linear;
+  //animation: wave-ani2 50s infinite linear;
 }

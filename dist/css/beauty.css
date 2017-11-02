@@ -200,6 +200,7 @@ li {
   background: url(../images/beauty/wave1.png) bottom repeat-x;
 }
 .banner .wave2 {
+  opcacity: 0.6;
   background: url(../images/beauty/wave2.png) bottom repeat-x;
 }
 .center-block {
@@ -654,7 +655,7 @@ li {
     background-position: 0 bottom;
   }
   100% {
-    background-position: 9999px bottom;
+    background-position: 33390px bottom;
   }
 }
 @keyframes wave-ani1 {
@@ -662,30 +663,30 @@ li {
     background-position: 0 bottom;
   }
   100% {
-    background-position: 9999px bottom;
+    background-position: 33390px bottom;
   }
 }
 @-webkit-keyframes wave-ani2 {
   0% {
-    background-position: 50px bottom;
+    background-position: -50px bottom;
   }
   100% {
-    background-position: 9999px bottom;
+    background-position: 25690px bottom;
   }
 }
 @keyframes wave-ani2 {
   0% {
-    background-position: 50px bottom;
+    background-position: -50px bottom;
   }
   100% {
-    background-position: 9999px bottom;
+    background-position: 25690px bottom;
   }
 }
 .wave1.ani {
-  -webkit-animation: wave-ani1 8s infinite linear;
-  animation: wave-ani1 8s infinite linear;
+  -webkit-animation: wave-ani1 50s infinite linear;
+  animation: wave-ani1 50s infinite linear;
 }
 .wave2.ani {
-  -webkit-animation: wave-ani1 8s infinite linear;
-  animation: wave-ani1 8s infinite linear;
+  -webkit-animation: wave-ani2 38.5s infinite linear;
+  animation: wave-ani2 38.5s infinite linear;
 }
