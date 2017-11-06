@@ -38,11 +38,6 @@
     transform-origin: center center;
     animation: shadowSize 1.2s infinite ease-in-out;
   }
-
-  //.col:hover &::before,
-  //.col:hover &::after {
-  //  animation: none;
-  //}
 }
 
 .icon-tong2 {
@@ -57,24 +52,6 @@
   }
 }
 
-//.icon-tong4{
-//  &::before , &::after{
-//    animation-delay:.9s ;
-//  }
-//}
-
-//.col:hover {
-//  .icon-tong {
-//    &::before {
-//      transform-origin: center bottom;
-//      animation: jump .7s infinite ease-in-out;
-//    }
-//    &::after {
-//      transform-origin: center center;
-//      animation: shadowSize .7s infinite ease-in-out;
-//    }
-//  }
-//}
 
 @keyframes card1 {
   0% {
@@ -82,10 +59,10 @@
     transform: translate3d(476px, 70px, 0) scale(0.681);
   }
 
-  //to {
-  //  opacity: 1;
-  //  transform: none
-  //}
+  to {
+    opacity: 1;
+    transform: none
+  }
 }
 
 @keyframes card2 {
@@ -161,8 +138,12 @@
 }
 
 .banner {
+  img{
+    visibility: hidden;
+  }
   .ani {
     img {
+      visibility: visible;
       transform-origin: top center;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -196,35 +177,48 @@
 
 @keyframes wave-ani1 {
   0% {
-    //transform: translate3d(100px, 0, 0);
-    background-position: 0 bottom;
+    background-position: 0 567-174px;
+  }
+  25% {
+    background-position: 2359/4px  567-174+15px;
+
   }
   50% {
-    //transform: none;
+    background-position: 2359/2px  567-174+5px;
+
+  }
+  75% {
+    background-position: 2359/4*3px  567-174+15px;
+
   }
   100% {
-    //transform: translate3d(100px, 0, 0);
-    background-position: 3339*10px bottom;
+    background-position: 2359px 567-174px;
   }
 }
 @keyframes wave-ani2 {
   0% {
-    background-position: -50px bottom;
+    background-position: 50px 567-125px;
+  }
+  25% {
+    background-position: 2359/4+50px  567-125+20px;
+
   }
   50% {
-    //transform: none;
+    background-position: 2359/2+50px 567-125px;
+  }
+  75% {
+    background-position: 2359/4*3+50px  567-125+20px;
+
   }
   100% {
-    //transform: translate3d(100px, 0, 0);
-    background-position: 2574*10-50px bottom;
+    background-position: 2359+50px 567-125px;
   }
 }
 
 .wave1.ani {
-  animation: wave-ani1 50s infinite linear;
+  animation: wave-ani1 6s infinite linear;
 }
 
 .wave2.ani {
-  animation: wave-ani2 50*0.77s infinite linear;
-  //animation: wave-ani2 50s infinite linear;
+  animation: wave-ani2 6s infinite linear;
 }

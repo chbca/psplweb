@@ -461,12 +461,22 @@ li {
     -webkit-transform: translate3d(476px, 70px, 0) scale(0.681);
     transform: translate3d(476px, 70px, 0) scale(0.681);
   }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 @keyframes card1 {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(476px, 70px, 0) scale(0.681);
     transform: translate3d(476px, 70px, 0) scale(0.681);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 @-webkit-keyframes card2 {
@@ -613,7 +623,11 @@ li {
     transform: none;
   }
 }
+.banner img {
+  visibility: hidden;
+}
 .banner .ani img {
+  visibility: visible;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -652,41 +666,77 @@ li {
 }
 @-webkit-keyframes wave-ani1 {
   0% {
-    background-position: 0 bottom;
+    background-position: 0 393px;
+  }
+  25% {
+    background-position: 589.75px 408px;
+  }
+  50% {
+    background-position: 1179.5px 398px;
+  }
+  75% {
+    background-position: 1769.25px 408px;
   }
   100% {
-    background-position: 33390px bottom;
+    background-position: 2359px 393px;
   }
 }
 @keyframes wave-ani1 {
   0% {
-    background-position: 0 bottom;
+    background-position: 0 393px;
+  }
+  25% {
+    background-position: 589.75px 408px;
+  }
+  50% {
+    background-position: 1179.5px 398px;
+  }
+  75% {
+    background-position: 1769.25px 408px;
   }
   100% {
-    background-position: 33390px bottom;
+    background-position: 2359px 393px;
   }
 }
 @-webkit-keyframes wave-ani2 {
   0% {
-    background-position: -50px bottom;
+    background-position: 50px 442px;
+  }
+  25% {
+    background-position: 639.75px 462px;
+  }
+  50% {
+    background-position: 1229.5px 442px;
+  }
+  75% {
+    background-position: 1819.25px 462px;
   }
   100% {
-    background-position: 25690px bottom;
+    background-position: 2409px 442px;
   }
 }
 @keyframes wave-ani2 {
   0% {
-    background-position: -50px bottom;
+    background-position: 50px 442px;
+  }
+  25% {
+    background-position: 639.75px 462px;
+  }
+  50% {
+    background-position: 1229.5px 442px;
+  }
+  75% {
+    background-position: 1819.25px 462px;
   }
   100% {
-    background-position: 25690px bottom;
+    background-position: 2409px 442px;
   }
 }
 .wave1.ani {
-  -webkit-animation: wave-ani1 50s infinite linear;
-  animation: wave-ani1 50s infinite linear;
+  -webkit-animation: wave-ani1 6s infinite linear;
+  animation: wave-ani1 6s infinite linear;
 }
 .wave2.ani {
-  -webkit-animation: wave-ani2 38.5s infinite linear;
-  animation: wave-ani2 38.5s infinite linear;
+  -webkit-animation: wave-ani2 6s infinite linear;
+  animation: wave-ani2 6s infinite linear;
 }

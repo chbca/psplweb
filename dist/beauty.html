@@ -43,7 +43,7 @@
             </ul>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" id="page_1">
         <div class="wave wave1 ani"></div>
         <div class="wave wave2 ani"></div>
         <div class="wrapper center-block">
@@ -64,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="block white_bg">
+    <div class="block white_bg" id="page_2">
         <div class="wrapper">
             <h2 class="block-title">
                 美业<em>痛点</em>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div class="block blue_bg">
+    <div class="block blue_bg" id="page_3">
         <div class="wrapper">
             <h2 class="block-title">
                 客源少？顾客难回头？手艺人留不住？
@@ -134,7 +134,7 @@
 
         </div>
     </div>
-    <div class="block white_bg">
+    <div class="block white_bg" id="page_4">
         <div class="wrapper center-block">
             <div class="desc">
                 <h4 class="title">
@@ -152,7 +152,7 @@
             </div>
         </div>
     </div>
-    <div class="block blue_bg">
+    <div class="block blue_bg" id="page_5">
         <div class="wrapper center-block">
             <div class="pic pic-left">
                 <img src="images/beauty/feature3.png" alt="">
@@ -177,7 +177,7 @@
             </div>
         </div>
     </div>
-    <div class="block white_bg">
+    <div class="block white_bg" id="page_6">
         <div class="wrapper center-block">
             <div class="desc">
                 <h4 class="title">
@@ -301,21 +301,55 @@
         </div>
     </div>
 </div>
-<script src="lib/scrollreveal/scrollreveal-311e16da11.js"></script>
+<script src="lib/jquery-mousewheel/jquery-59a31d5752.mousewheel.js"></script>
 <script>
-    window.sr = ScrollReveal({
-        reset: true // 不重复动画
-    });
-    var banner_pic = document.getElementById('banner_pic');
-    sr.reveal('.pic', {
-        duration: 1000,
-        scale: 1,
-        origin: "bottom", distance: "20px"
-    });
+    var mouseTodo = false;
+    var OFFSET = 80;
+    var DURATION = 500;
     $(function () {
         $(".banner-pics").addClass("ani");
     });
+    $(document).on("mousewheel", function (event, delta, deltaX, deltaY) {
+        if (mouseTodo) {
+            return false
+        }
+        var winStop = $(window).scrollTop();
+        console.log(winStop);
+        var winH = $(window).height();
+        if (delta < 0) {
+            if (winStop < 565) {
 
+                $("html,body").animate({scrollTop: "565px"}, DURATION, function () {
+                    mouseTodo = false;
+                })
+                mouseTodo = true
+            }
+            if (winStop < 1495- OFFSET && winStop >= 565) {
+                $("html,body").animate({scrollTop: $("#page_3").offset().top - OFFSET + "px" || "1415px"}, DURATION, function () {
+                    mouseTodo = false
+                })
+                mouseTodo = true
+            }
+            if (winStop < 2193 - OFFSET && winStop >= 1495 - OFFSET) {
+                $("html,body").animate({scrollTop: $("#page_4").offset().top - OFFSET + "px" || "2113px"}, DURATION, function () {
+                    mouseTodo = false
+                })
+                mouseTodo = true
+            }
+            if (winStop < 2771 - OFFSET && winStop >= 2193 - OFFSET) {
+                $("html,body").animate({scrollTop: $("#page_5").offset().top - OFFSET + "px" || "2691px"}, DURATION, function () {
+                    mouseTodo = false
+                })
+                mouseTodo = true
+            }
+            if (winStop < 3349 - OFFSET && winStop >= 2771 - OFFSET) {
+                $("html,body").animate({scrollTop: $("#page_6").offset().top - OFFSET + "px" || "3369px"}, DURATION, function () {
+                    mouseTodo = false
+                })
+                mouseTodo = true
+            }
+        }
+    });
 </script>
 </body>
 
